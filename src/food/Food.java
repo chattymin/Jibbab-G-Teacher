@@ -49,6 +49,9 @@ public class Food implements Manageable {
 			return true;
 		if (taste.contains(kwd))
 			return true;
+		//재료 검색 부분 추가
+		if (ingr.contains(kwd))
+			return true;
 		if (recipe.contains(kwd))
 			return true;
 		return false;
