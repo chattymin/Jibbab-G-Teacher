@@ -1,6 +1,5 @@
 // 파일 입출력 구현 여부를 판단하기 위해 간단하게 만들어두었습니다. 
 // 작업 시작하시기 전에 제대로 작동하는지 확인하시고 삭제 후 작업 부탁드립니다.
-
 package food;
 
 import java.util.Scanner;
@@ -9,25 +8,50 @@ import mgr.Manageable;
 public class Food implements Manageable {
 	int FoodCategory;	// 한식, 양식등 상속 구분용
 	String name;		// 음식 이름
+	String type; //타입 ex)메인 
+	String taste; //맛
+	String ingr; //ingredient 재료
+	String recipe; //조리
+	String country;//나라 
+	
+	String findCountry(int num) {
+		switch (num) {
+		case 0 : country = "기타"; break;
+		case 1 : country = "한식"; break;
+		case 2 : country = "양식"; break;
+		}
+		return country;
+	}
 	
 	@Override
 	public void read(Scanner scan, int FoodCategory) {
-		// TODO Auto-generated method stub
 		this.FoodCategory = FoodCategory;
+		type = scan.next();
+		taste = scan.next();
+		ingr = scan.next();
+		recipe = scan.next();
 		name = scan.next();
+		country = findCountry(FoodCategory);
 	}
 
 	@Override
 	public void print() {
-		// TODO Auto-generated method stub
-		System.out.printf("%s\n", name);
+		System.out.format("[%s]%s(%s) - %s 재료:%s 조리법:%s\n", country, name, type, taste, ingr, recipe);
 	}
+	
 	@Override
 	public boolean matches(String kwd) {
-		// TODO Auto-generated method stub
-		if(name.contains(kwd))
+		if (kwd.contentEquals("기타") && FoodCategory == 0)
 			return true;
-		if(kwd.contentEquals("한식") && FoodCategory == 1)
+		//한식 클래스에 if(kwd.contentEquals("한식") && FoodCategory == 1)return true; 추가해주세요
+		//양식 클래스에 if(kwd.contentEquals("양식") && FoodCategory == 2)return true; 추가해주세요
+		if (name.contains(kwd))
+			return true;
+		if (type.contains(kwd))
+			return true;
+		if (taste.contains(kwd))
+			return true;
+		if (recipe.contains(kwd))
 			return true;
 		return false;
 	}
