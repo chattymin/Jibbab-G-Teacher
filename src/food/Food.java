@@ -1,5 +1,3 @@
-// 파일 입출력 구현 여부를 판단하기 위해 간단하게 만들어두었습니다. 
-// 작업 시작하시기 전에 제대로 작동하는지 확인하시고 삭제 후 작업 부탁드립니다.
 package food;
 
 import java.util.Scanner;
@@ -8,11 +6,11 @@ import mgr.Manageable;
 public class Food implements Manageable {
 	int FoodCategory;	// 한식, 양식등 상속 구분용
 	String name;		// 음식 이름
-	String type; //타입 ex)메인 
+	String type; //타입 ex)메인
 	String taste; //맛
 	String ingr; //ingredient 재료
 	String recipe; //조리
-	String country;//나라 
+	String country;//나라  
 	
 	String findCountry(int num) {
 		switch (num) {
