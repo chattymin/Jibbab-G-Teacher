@@ -22,7 +22,7 @@ public class Store extends Manager implements Factory {
 		switch(inherit) { 
 			case 0 : return new Food();
 			case 1 : return new KorFood();  // 1번 수정 완료
-			case 2 : return new Food();
+			case 2 : return new Western();
 		}
 		return null;
 	}
