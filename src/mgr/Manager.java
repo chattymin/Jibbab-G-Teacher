@@ -4,8 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Manager {
-	ArrayList<Manageable> mList = new ArrayList<>();
+public class Manager<T extends Manageable> {
+	ArrayList<T> mList = new ArrayList<>();
 	Scanner scan = new Scanner(System.in);
 	
 	Scanner openFile(String filename) {
@@ -19,9 +19,9 @@ public class Manager {
 		return filein;
 	}
 	
-	public void readAll(Factory fac, String filename) {
+	public void readAll(Factory<T> fac, String filename) {
 		Scanner filein = openFile(filename);
-		Manageable m = null;
+		T m = null;
 		int inherit = 0;
 		
 		while(filein.hasNext()) {
@@ -34,7 +34,7 @@ public class Manager {
 	}
 	
 	public void printAll() {
-		for (Manageable m : mList) {
+		for (T m : mList) {
 			m.print();
 		}
 	}
@@ -47,7 +47,7 @@ public class Manager {
 			if(kwd.equals("end")) 
 				break;
 			System.out.println("====검색 결과====");
-			for(Manageable m : mList) {
+			for(T m : mList) {
 				if(m.matches(kwd)) {
 					m.print();
 				}

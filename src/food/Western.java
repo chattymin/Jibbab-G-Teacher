@@ -2,15 +2,13 @@ package food;
 
 import java.util.Scanner;
 
-import mgr.Manageable;
-
 public class Western extends Food{
     @Override
     public String findCountry(int num) {
         switch (num) {
-        case 0 : country = "±âÅ¸"; break;
-        case 1 : country = "ÇÑ½Ä"; break;
-        case 2 : country = "¾ç½Ä"; break;
+            case 0 : country = "ê¸°íƒ€"; break;
+            case 1 : country = "í•œì‹"; break;
+            case 2 : country = "ì–‘ì‹"; break;
         }
         return country;
     }
@@ -26,7 +24,7 @@ public class Western extends Food{
 
     @Override
     public boolean matches(String kwd) {
-        if (kwd.contentEquals("¾ç½Ä")&&FoodCategory==2)
+        if (kwd.contentEquals("ï¿½ï¿½ï¿½")&&FoodCategory==2)
             return true;
         if (name.contains(kwd))
             return true;
@@ -34,7 +32,7 @@ public class Western extends Food{
             return true;
         if (taste.contains(kwd))
             return true;
-        //Àç·á °Ë»ö ºÎºĞ Ãß°¡
+        //ì¬ë£Œ ê²€ìƒ‰ ë¶€ë¶„ ì¶”ê°€
         if (ingr.contains(kwd))
             return true;
         if (recipe.contains(kwd))

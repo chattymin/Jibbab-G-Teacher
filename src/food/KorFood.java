@@ -7,9 +7,9 @@ public class KorFood extends Food {
 	@Override
 	public String findCountry(int num) {
 		switch (num) {
-		case 0 : country = "기타"; break;
-		case 1 : country = "한식"; break;
-		case 2 : country = "양식"; break;
+			case 0 : country = "기타"; break;
+			case 1 : country = "한식"; break;
+			case 2 : country = "양식"; break;
 		}
 		return country;
 	}

@@ -1,5 +1,5 @@
 package mgr;
 
-public interface Factory {
-	public Manageable create(int inherit);
+public interface Factory<T extends Manageable> {
+	T create(int inherit);
 }

@@ -42,7 +42,6 @@ public class Food implements Manageable {
 		if (kwd.contentEquals("기타") && FoodCategory == 0)
 			return true;
 		//한식 클래스에 if(kwd.contentEquals("한식") && FoodCategory == 1)return true; 추가해주세요
-		//양식 클래스에 if(kwd.contentEquals("양식") && FoodCategory == 2)return true; 추가해주세요
 		if (name.contains(kwd))
 			return true;
 		if (type.contains(kwd))
