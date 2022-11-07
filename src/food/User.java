@@ -7,7 +7,7 @@ import java.util.Scanner;
 // 사용자 id와 pw를 만들어두었습니다.
 //  id는 본인의 이니셜, pw는 123456입니다
 // ex) id : pdm        pw : 123456
-인
+
 public class User implements Manageable {
     ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 저장 리스트
     String ID, PW, name, phoneNumber;
