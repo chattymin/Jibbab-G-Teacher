@@ -11,7 +11,7 @@ public class Store extends Manager {
 	public Manager<DessertFood> dessertFoodMgr = new Manager<>();
 	public Manager<WesternFood> westernFoodMgr = new Manager<>();
 	ArrayList<Manager> totalList = new ArrayList<>();// 각 foodMgr를 전부 담아놓는 리스트
-
+//test
 	Scanner scan = new Scanner(System.in);
 
 	public Store() {
