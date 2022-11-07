@@ -3,8 +3,6 @@ package food;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
-
 import mgr.Factory;
 import mgr.Manager;
 
@@ -12,6 +10,8 @@ public class Store extends Manager {
 	public Manager<KorFood> korFoodMgr = new Manager<>();
 	public Manager<DessertFood> dessertFoodMgr = new Manager<>();
 	public Manager<WesternFood> westernFoodMgr = new Manager<>();
+	public Manager<JapFood> japFoodMgr = new Manager<>();
+	public Manager<ChiFood> chiFoodMgr = new Manager<>();
 	public Manager<User> userMgr = new Manager<>();
 	public ArrayList<Manager> totalList = new ArrayList<>();// 각 foodMgr를 전부 담아놓는 리스트
 
@@ -31,12 +31,24 @@ public class Store extends Manager {
 				return new WesternFood();
 			}
 		});
+		japFoodMgr.readAll("JapaneseFood.txt", new Factory<JapFood>() {
+			@Override
+			public JapFood create() {
+				return new JapFood();
+			}
+		});
+		chiFoodMgr.readAll("ChineseFood.txt", new Factory<ChiFood>() {
+			@Override
+			public ChiFood create() {
+				return new ChiFood();
+			}
+		});
 		dessertFoodMgr.readAll("DessertFood.txt", new Factory<DessertFood>() {
 			@Override
 			public DessertFood create() {
 				return new DessertFood();
 			}
-		});	
+		});
 
 		// 사용자 매니저
 		userMgr.readAll("User.txt", new Factory<User>() {
@@ -51,11 +63,15 @@ public class Store extends Manager {
 		korFoodMgr.printAll();
 		westernFoodMgr.printAll();
 		dessertFoodMgr.printAll();
+		japFoodMgr.printAll();
+		chiFoodMgr.printAll();
 
 		// 각 음식들 전부 totalList에 추가
 		totalList.add(korFoodMgr);
 		totalList.add(dessertFoodMgr);
 		totalList.add(westernFoodMgr);
+		totalList.add(japFoodMgr);
+		totalList.add(chiFoodMgr);
 
 		System.out.println("==사용자 목록==");
 		userMgr.printAll();

@@ -10,21 +10,29 @@ public class Food implements Manageable {
 	String ingr; // ingredient 재료
 	String recipe; // 조리
 	String country;// 나라
+	int like; // 좋아요 수
 
 	@Override
 	public void read(Scanner scan) {
+		String temp = null;
 		type = scan.next();
 		taste = scan.next();
 		ingr = scan.next();
+		while (true){
+			temp = scan.next();
+			if (temp.equals("0"))
+				break;
+			ingr = ingr + " " + temp;
+		} //arraylist 사용 안 하고 하는 방식이 더 좋아보여서 했습니다.
 		recipe = scan.next();
 		name = scan.next();
+		like = scan.nextInt();
 		country = "디저트";
-
 	}
 
 	@Override
 	public void print() {
-		System.out.format("[%s]%s(%s) - %s 재료:%s 조리법:%s\n", country, name, type, taste, ingr, recipe);
+		System.out.format("[%s]%s(%s) - %s 재료:%s 조리법:%s 좋아요 수 : %d\n", country, name, type, taste, ingr, recipe, like);
 	}
 
 	@Override
@@ -42,5 +50,9 @@ public class Food implements Manageable {
 		if (recipe.contains(kwd))
 			return true;
 		return false;
+	}
+	public String[] getTexts() {  //  행 추가를 위해 객체 데이터를 가져오는 getTexts 메소드
+		return new String[] {name, country, type, taste, 
+				ingr, recipe, "" + like};
 	}
 }
