@@ -13,9 +13,16 @@ public class Food implements Manageable {
 
 	@Override
 	public void read(Scanner scan) {
+		String temp = null;
 		type = scan.next();
 		taste = scan.next();
 		ingr = scan.next();
+		while (true){
+			temp = scan.next();
+			if (temp.equals("0"))
+				break;
+			ingr = ingr + " " + temp;
+		} //arraylist 사용 안 하고 하는 방식이 더 좋아보여서 했습니다.
 		recipe = scan.next();
 		name = scan.next();
 		country = "디저트";
