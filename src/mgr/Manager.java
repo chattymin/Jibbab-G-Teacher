@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Manager<T extends Manageable> {
-	ArrayList<T> mList = new ArrayList<>();
+	private ArrayList<T> mList = new ArrayList<>();
 	Scanner scan = new Scanner(System.in);
-	
+
 	Scanner openFile(String filename) {
 		Scanner filein = null;
 		try {
@@ -18,40 +18,50 @@ public class Manager<T extends Manageable> {
 		}
 		return filein;
 	}
-	
-	public void readAll(Factory<T> fac, String filename) {
+
+	public void readAll(String filename, Factory<T> fac) {
 		Scanner filein = openFile(filename);
 		T m = null;
-		int inherit = 0;
-		
-		while(filein.hasNext()) {
-			inherit = filein.nextInt();
-			m = fac.create(inherit);
-			m.read(filein, inherit);
+
+		while (filein.hasNext()) {
+			m = fac.create();
+			m.read(filein);
 			mList.add(m);
 		}
 		filein.close();
 	}
-	
+
 	public void printAll() {
 		for (T m : mList) {
 			m.print();
 		}
 	}
-	
+
+	// 한식 양식 디저트 순으로 음식 종류별 검색 가능
+	// ex)한식->한식 전체 출력,찌개-> 한식 리스트 중 찌개 해당 음식 출력
+	// end입력시 한식 리스트 검색 종료->양식 검색 리스트 돌아감
 	public void search() {
 		String kwd = null;
 		while (true) {
-			System.out.print("\n검색어 입력(end입력시 종료) : ");
+			System.out.printf("\n검색(end입력시 종료) : ");
 			kwd = scan.next();
-			if(kwd.equals("end")) 
+			if (kwd.equals("end"))
 				break;
 			System.out.println("====검색 결과====");
-			for(T m : mList) {
-				if(m.matches(kwd)) {
-					m.print();
-				}
+			search(mList, kwd);
+		}
+
+	}
+	//각 음식 매니저속 키워드 search
+	public void search(ArrayList<T> list, String kwd) {
+		for (T m : list) {
+			if (m.matches(kwd)) {
+				m.print();
 			}
 		}
+	}
+
+	public ArrayList<T> getList() {
+		return mList;
 	}
 }
