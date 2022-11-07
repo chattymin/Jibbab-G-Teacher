@@ -51,4 +51,8 @@ public class Food implements Manageable {
 			return true;
 		return false;
 	}
+	public String[] getTexts() {  //  행 추가를 위해 객체 데이터를 가져오는 getTexts 메소드
+		return new String[] {name, country, type, taste, 
+				ingr, recipe, "" + like};
+	}
 }
