@@ -10,6 +10,7 @@ public class Food implements Manageable {
 	String ingr; // ingredient 재료
 	String recipe; // 조리
 	String country;// 나라
+	int like; // 좋아요 수
 
 	@Override
 	public void read(Scanner scan) {
@@ -25,12 +26,13 @@ public class Food implements Manageable {
 		} //arraylist 사용 안 하고 하는 방식이 더 좋아보여서 했습니다.
 		recipe = scan.next();
 		name = scan.next();
+		like = scan.nextInt();
 		country = "디저트";
 	}
 
 	@Override
 	public void print() {
-		System.out.format("[%s]%s(%s) - %s 재료:%s 조리법:%s\n", country, name, type, taste, ingr, recipe);
+		System.out.format("[%s]%s(%s) - %s 재료:%s 조리법:%s 좋아요 수 : %d\n", country, name, type, taste, ingr, recipe, like);
 	}
 
 	@Override
