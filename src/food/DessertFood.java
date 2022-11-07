@@ -31,4 +31,8 @@ public class DessertFood extends Food {
             return true;
         return false;
     }
+    @Override
+	public String[] getTexts() {
+		return super.getTexts();
+	}
 }
