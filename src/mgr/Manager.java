@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Manager<T extends Manageable> {
+	// List는 직접적으로 접근하시면 안됩니다!!! getList 메서드 만들어 두었으니 해당 방법으로 접근 부탁드릴게요
 	private ArrayList<T> mList = new ArrayList<>();
 	Scanner scan = new Scanner(System.in);
 
@@ -61,6 +62,7 @@ public class Manager<T extends Manageable> {
 		}
 	}
 
+	//
 	public ArrayList<T> getList() {
 		return mList;
 	}

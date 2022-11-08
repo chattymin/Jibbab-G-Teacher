@@ -63,15 +63,15 @@ public class FoodStoreDemo extends JPanel {
         // tablemodel를 통해 table 데이터의 큰 틀을 짜준다
         final String[] columnNames = {"이름", "나라", "타입", "맛", "재료", "조리법", "좋아요 수"}; 
     	DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0); 
-    	for (KorFood f : korFoodMgr.mList) // addRow함수로 행 추가
+    	for (KorFood f : korFoodMgr.getList()) // addRow함수로 행 추가
     		tableModel.addRow(f.getTexts());
-    	for (WesternFood f : westernFoodMgr.mList)
+    	for (WesternFood f : westernFoodMgr.getList())
     		tableModel.addRow(f.getTexts());
-    	for (DessertFood f : dessertFoodMgr.mList)
+    	for (DessertFood f : dessertFoodMgr.getList())
     		tableModel.addRow(f.getTexts());
-    	for (JapFood f : japFoodMgr.mList)
+    	for (JapFood f : japFoodMgr.getList())
     		tableModel.addRow(f.getTexts());
-    	for (ChiFood f : chiFoodMgr.mList)
+    	for (ChiFood f : chiFoodMgr.getList())
     		tableModel.addRow(f.getTexts());
        	table = new JTable(tableModel);
         table.setPreferredScrollableViewportSize(new Dimension(800, 220));
