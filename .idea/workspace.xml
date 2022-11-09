@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/FoodStoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/FoodStoreDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mgr/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mgr/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +34,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/이찬영/Desktop/TeamProject/ObjectOrientedTeamG&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="food.Main" />
+      <module name="ObjectOrientedTeamG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="food.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Store" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="food.Store" />
       <module name="ObjectOrientedTeamG" />
@@ -57,6 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Store" />
       </list>
     </recent_temporary>
