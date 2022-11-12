@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/DessertFood.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DessertFood.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KorFood.txt" beforeDir="false" afterPath="$PROJECT_DIR$/KorFood.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChineseFood.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DessertFood.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Foods.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JapaneseFood.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/KorFood.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WesternFood.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/ChiFood.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/DessertFood.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/FoodStoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/FoodStoreDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/JapFood.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/KorFood.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/WesternFood.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +47,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/이찬영/Desktop/TeamProject/ObjectOrientedTeamG&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Store">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="food.Main" />
+      <module name="ObjectOrientedTeamG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="food.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Store" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="food.Store" />
       <module name="ObjectOrientedTeamG" />
@@ -55,6 +84,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Store" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -69,6 +99,8 @@
       <workItem from="1667825950880" duration="2135000" />
       <workItem from="1667829593552" duration="230000" />
       <workItem from="1667829833587" duration="1285000" />
+      <workItem from="1667837557921" duration="651000" />
+      <workItem from="1667873550024" duration="385000" />
     </task>
     <servers />
   </component>

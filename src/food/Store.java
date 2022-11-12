@@ -7,9 +7,7 @@ import mgr.Factory;
 import mgr.Manager;
 
 public class Store extends Manager {
-	public Manager<KorFood> korFoodMgr = new Manager<>();
-	public Manager<DessertFood> dessertFoodMgr = new Manager<>();
-	public Manager<WesternFood> westernFoodMgr = new Manager<>();
+	public Manager<Food> foodMgr = new Manager<>();
 	public Manager<User> userMgr = new Manager<>();
 	public ArrayList<Manager> totalList = new ArrayList<>();// 각 foodMgr를 전부 담아놓는 리스트
 
@@ -17,22 +15,10 @@ public class Store extends Manager {
 
 	public Store() {
 		// 각각 음식들 매니저 분리
-		korFoodMgr.readAll("KorFood.txt", new Factory<KorFood>() {
+		foodMgr.readAll("Foods.txt", new Factory<Food>() {
 			@Override
-			public KorFood create() {
-				return new KorFood();
-			}
-		});
-		westernFoodMgr.readAll("WesternFood.txt", new Factory<WesternFood>() {
-			@Override
-			public WesternFood create() {
-				return new WesternFood();
-			}
-		});
-		dessertFoodMgr.readAll("DessertFood.txt", new Factory<DessertFood>() {
-			@Override
-			public DessertFood create() {
-				return new DessertFood();
+			public Food create() {
+				return new Food();
 			}
 		});
 
@@ -46,14 +32,10 @@ public class Store extends Manager {
 
 		// 각 음식 매니저 출력
 		System.out.println("==음식 목록==");
-		korFoodMgr.printAll();
-		westernFoodMgr.printAll();
-		dessertFoodMgr.printAll();
+		foodMgr.printAll();
 
 		// 각 음식들 전부 totalList에 추가
-		totalList.add(korFoodMgr);
-		totalList.add(dessertFoodMgr);
-		totalList.add(westernFoodMgr);
+		totalList.add(foodMgr);
 
 		System.out.println("==사용자 목록==");
 		userMgr.printAll();
