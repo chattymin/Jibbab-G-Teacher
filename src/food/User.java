@@ -12,7 +12,8 @@ import java.util.Scanner;
 // ex) id : pdm        pw : 123456
 
 public class User implements Manageable {
-    public ArrayList<String> foodList, myFridge = new ArrayList<>(); //선호하는 음식, 보유 재료 저장 리스트
+    public ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
+    public ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
     String ID, PW, name, phoneNumber;
 
     @Override
