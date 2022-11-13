@@ -1,6 +1,8 @@
 package food;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 import mgr.Factory;
@@ -27,12 +29,67 @@ public class Store extends Manager {
 			@Override
 			public User create() {
 				return new User();
-			}
+				}
 		});
-
+		
+		for (User u : userMgr.getList()) { // 오류
+				u.readtxt("FoodList.txt", u.foodList);
+				u.readtxt("MyFridge.txt", u.myFridge);
+		}
 		// 각 음식 매니저 출력
 		System.out.println("==음식 목록==");
-		foodMgr.printAll();
+		while (true){
+			System.out.println("(1)이름순 (2)가격 낮은 순 (3)가격 높은 순 (4)좋아요순 (5)종료:");//우선 스위치문으로 구분해두었습니다.
+			int n = scan.nextInt();
+			if (n < 1 || n > 4) break;
+			switch (n){
+				case 1://이름순
+					Collections.sort(foodMgr.getList());
+					foodMgr.printAll();
+					break;
+				case 2://가격 낮은 순
+					Collections.sort(foodMgr.getList(), new Comparator<Food>() {
+						@Override
+						public int compare(Food o1, Food o2) {
+							if (o1.price > o2.price)
+								return 1;
+							if (o1.price < o2.price)
+								return -1;
+							return 0;
+						}
+					});
+					foodMgr.printAll();
+					break;
+				case 3://가격 높은 순
+					Collections.sort(foodMgr.getList(), new Comparator<Food>() {
+						@Override
+						public int compare(Food o1, Food o2) {
+							if (o1.price < o2.price)
+								return 1;
+							if (o1.price > o2.price)
+								return -1;
+							return 0;
+						}
+					});
+					foodMgr.printAll();
+					break;
+				case 4://좋아요 순
+					Collections.sort(foodMgr.getList(), new Comparator<Food>() {
+						@Override
+						public int compare(Food o1, Food o2) {
+							if (o1.like < o2.like)
+								return 1;
+							if (o1.like > o2.like)
+								return -1;
+							return 0;
+						}
+					});
+					foodMgr.printAll();
+					break;
+				default:
+					break;
+			}
+		}
 
 		// 각 음식들 전부 totalList에 추가
 		totalList.add(foodMgr);

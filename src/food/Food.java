@@ -1,13 +1,14 @@
 package food;
 
+import java.util.Comparator;
 import java.util.Scanner;
 import mgr.Manageable;
 
-public class Food implements Manageable {
+public class Food implements Manageable, Comparable<Food> {
 	String country; // 나라
 	String name; // 음식 이름
 	String type; // 타입 ex)메인
-	String price; // 맛
+	int price; //가격 정렬때문에 정수형으로 바꿨습니다.
 	String ingr; // ingredient 재료
 	String recipe; // 조리
 	int like; // 좋아요 수
@@ -18,7 +19,7 @@ public class Food implements Manageable {
 		String temp = null;
 		country = scan.next();
 		type = scan.next();
-		price = scan.next();
+		price = scan.nextInt();
 		ingr = scan.next();
 		while (true){
 			temp = scan.next();
@@ -44,7 +45,7 @@ public class Food implements Manageable {
 			return true;
 		if (type.contains(kwd))
 			return true;
-		if (price.contains(kwd))
+		if ((""+price).contains(kwd))
 			return true;
 		if (ingr.contains(kwd))
 			return true;
@@ -53,7 +54,13 @@ public class Food implements Manageable {
 		return false;
 	}
 	public String[] getTexts() {  //  행 추가를 위해 객체 데이터를 가져오는 getTexts 메소드
-		return new String[] {name, country, type, price, 
+		return new String[] {name, country, type, "" + price,
 				ingr, recipe, "" + like};
+	}
+
+
+	@Override
+	public int compareTo(Food o) {
+		return name.compareTo(o.name);
 	}
 }

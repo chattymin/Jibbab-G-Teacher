@@ -1,6 +1,9 @@
 package food;
 
+import mgr.Factory;
 import mgr.Manageable;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,31 +12,48 @@ import java.util.Scanner;
 // ex) id : pdm        pw : 123456
 
 public class User implements Manageable {
-    ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 저장 리스트
+    public ArrayList<String> foodList, myFridge = new ArrayList<>(); //선호하는 음식, 보유 재료 저장 리스트
     String ID, PW, name, phoneNumber;
 
     @Override
     public void read(Scanner scan) {
-        String kwd = null;
         ID = scan.next();
         PW = scan.next();
         name = scan.next();
         phoneNumber = scan.next();
-        while (true){
-            kwd = scan.next();
-            if (kwd.contentEquals("end"))
-                break;
-            foodList.add(kwd);
-        }
     }
+  
+    public void readtxt(String filename, ArrayList<String> list) { // 오류
+    	Scanner filein = openFile(filename);
+    	String wd = null;
+		while (filein.hasNext()) {
+			wd = filein.next();
+			list.add(wd);
+		}
+		filein.close();
+	}
+    
+	Scanner openFile(String filename) {
+		Scanner filein = null;
+		try {
+			filein = new Scanner(new File(filename));
+		} catch (Exception e) {
+			System.out.printf("파일 오픈 실패: %s\n", filename);
+			System.exit(0);
+		}
+		return filein;
+	}
 
-    @Override
+	@Override
     public void print() {
         System.out.format("[%s] %s\n 선호 음식 : ", name, phoneNumber);
         for (String s : foodList)
-            System.out.print(s + " ");
+        	System.out.format(s + " ");
         System.out.println();
-    }
+        for (String s : myFridge)
+        	System.out.format(s + " ");
+        System.out.println();
+	}
 
     @Override
     public boolean matches(String kwd) {
@@ -50,4 +70,8 @@ public class User implements Manageable {
             return true;
         return false;
     }
-}
+    
+    public ArrayList<String> getfoodList() {
+    	return foodList;
+    }
+    }
