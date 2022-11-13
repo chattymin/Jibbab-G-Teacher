@@ -12,8 +12,8 @@ import java.util.Scanner;
 // ex) id : pdm        pw : 123456
 
 public class User implements Manageable {
-    public ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
-    public ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
+    ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
+    ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
     String ID, PW, name, phoneNumber;
 
     @Override
@@ -24,7 +24,7 @@ public class User implements Manageable {
         phoneNumber = scan.next();
     }
   
-    public void readtxt(String filename, ArrayList<String> list) { // 오류
+    public void readtxt(String filename, ArrayList<String> list) { // 보유 재료, 선호 음식 파일 입력 메소드
     	Scanner filein = openFile(filename);
     	String wd = null;
 		while (filein.hasNext()) {
@@ -49,10 +49,11 @@ public class User implements Manageable {
     public void print() {
         System.out.format("[%s] %s\n 선호 음식 : ", name, phoneNumber);
         for (String s : foodList)
-        	System.out.format(s + " ");
+        	System.out.print(s + " ");
         System.out.println();
+        System.out.printf(" 보유 재료 : ");
         for (String s : myFridge)
-        	System.out.format(s + " ");
+        	System.out.print(s + " ");
         System.out.println();
 	}
 
@@ -71,8 +72,4 @@ public class User implements Manageable {
             return true;
         return false;
     }
-    
-    public ArrayList<String> getfoodList() {
-    	return foodList;
-    }
-    }
+}
