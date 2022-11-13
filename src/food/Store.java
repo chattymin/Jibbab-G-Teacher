@@ -29,9 +29,13 @@ public class Store extends Manager {
 			@Override
 			public User create() {
 				return new User();
-			}
+				}
 		});
-
+		
+		for (User u : userMgr.getList()) { // 오류
+				u.readtxt("FoodList.txt", u.foodList);
+				u.readtxt("MyFridge.txt", u.myFridge);
+		}
 		// 각 음식 매니저 출력
 		System.out.println("==음식 목록==");
 		while (true){
