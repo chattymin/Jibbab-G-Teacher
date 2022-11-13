@@ -12,7 +12,7 @@ public class Store extends Manager {
 	public Manager<Food> foodMgr = new Manager<>();
 	public Manager<User> userMgr = new Manager<>();
 	public ArrayList<Manager> totalList = new ArrayList<>();// 각 foodMgr를 전부 담아놓는 리스트
-
+	
 	Scanner scan = new Scanner(System.in);
 
 	public Store() {
@@ -32,10 +32,11 @@ public class Store extends Manager {
 				}
 		});
 		
-		for (User u : userMgr.getList()) { // 오류
+		for (User u : userMgr.getList()) { // user에 foodList(선호 음식), myFridge(보유 재료) 내용 추가
 				u.readtxt("FoodList.txt", u.foodList);
 				u.readtxt("MyFridge.txt", u.myFridge);
 		}
+		
 		// 각 음식 매니저 출력
 		System.out.println("==음식 목록==");
 		while (true){
