@@ -53,17 +53,14 @@ public class Manager<T extends Manageable> {
 		}
 
 	}
-	//각 음식 매니저속 키워드 search
+	//각 매니저속 키워드 search
 	public void search(ArrayList<T> list, String kwd) {
-		for (T m : list) {
+		for (T m : getList()) {
 			if (m.matches(kwd)) {
 				m.print();
 			}
 		}
 	}
 
-	//
-	public ArrayList<T> getList() {
-		return mList;
-	}
+	public ArrayList<T> getList() {return mList;}
 }
