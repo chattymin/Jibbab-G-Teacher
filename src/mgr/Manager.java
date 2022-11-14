@@ -49,15 +49,10 @@ public class Manager<T extends Manageable> {
 			if (kwd.equals("end"))
 				break;
 			System.out.println("====검색 결과====");
-			search(mList, kwd);
-		}
-
-	}
-	//각 매니저속 키워드 search
-	public void search(ArrayList<T> list, String kwd) {
-		for (T m : getList()) {
-			if (m.matches(kwd)) {
-				m.print();
+			for (T m : getList()) {
+				if (m.matches(kwd)) {
+					m.print();
+				}
 			}
 		}
 	}

@@ -1,37 +1,33 @@
 package food;
 
 import mgr.Manageable;
+import mgr.Manager;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
-// 사용자 id와 pw를 만들어두었습니다.
-//  id는 본인의 이니셜, pw는 123456입니다
-// ex) id : pdm        pw : 123456
-
 public class User implements Manageable {
     private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
     private ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
     private HashSet<Food> fridgeSearchList = new HashSet<>();
 
-    String ID, PW, name, phoneNumber;
+    String name;
 
     @Override
     public void read(Scanner scan) {
-        ID = scan.next();
-        PW = scan.next();
         name = scan.next();
-        phoneNumber = scan.next();
+        readtxt("FoodList.txt", foodList);
+        readtxt("MyFridge.txt", myFridge);
     }
   
     public void readtxt(String filename, ArrayList<String> list) { // 보유 재료, 선호 음식 파일 입력 메소드
     	Scanner filein = openFile(filename);
-    	String wd = null;
+    	String kwd = null;
 		while (filein.hasNext()) {
-			wd = filein.next();
-			list.add(wd);
+			kwd = filein.next();
+			list.add(kwd);
 		}
 		filein.close();
 	}
@@ -49,7 +45,7 @@ public class User implements Manageable {
 
 	@Override
     public void print() {
-        System.out.format("[%s] %s\n 선호 음식 : ", name, phoneNumber);
+        System.out.format("[%s] \n 선호 음식 : ", name);
         for (String s : foodList)
         	System.out.print(s + " ");
         System.out.println();
@@ -60,24 +56,26 @@ public class User implements Manageable {
 	}
 
     @Override
-    public boolean matches(String kwd) {
-        if (kwd.contains(name))
-            return true;
-        if (kwd.contains(phoneNumber))
-            return true;
+    public boolean matches(String kwd) { //user의 변수 활용이 없어짐에 따라 matches메서드가 불필요해짐.
         return false;
     }
 
-    // 로그인을 위한 id, pw 체크
-    public boolean UserLogin(String id, String pw){
-        if (ID.contentEquals(id) && PW.contentEquals(pw))
-            return true;
-        return false;
+    public void fridgeSearch(Manager<Food> manager){
+        for (String fridge: myFridge) {
+            for (Food f : manager.getList()) {
+                if (f.matches(fridge))
+                    fridgeSearchList.add(f);
+            }
+        }
+
+        System.out.format("\n==보유한 재료가 포함된 음식 목록==\n");
+        for (Food f: fridgeSearchList) {f.print();}
+
+        // 사용 종료된 HashSet비우기 => 보유 재료 변경됐을때 이전 값 남아있는 현상 방지
+        fridgeSearchList.clear();
     }
 
     public ArrayList<String> getMyFridgeList() {return myFridge;}
-
-    public ArrayList<String> getFoodList() {return foodList;}
 
     public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
 }

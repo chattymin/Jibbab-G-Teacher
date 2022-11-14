@@ -14,7 +14,7 @@ public class Store extends Manager {
 	Scanner scan = new Scanner(System.in);
 
 	public Store() {
-		// 음식 매니
+		// 음식 매니저
 		foodMgr.readAll("Foods.txt", new Factory<Food>() {
 			@Override
 			public Food create() {
@@ -30,15 +30,11 @@ public class Store extends Manager {
 				}
 		});
 		
-		for (User u : userMgr.getList()) { // user에 foodList(선호 음식), myFridge(보유 재료) 내용 추가
-				u.readtxt("FoodList.txt", u.getFoodList());
-				u.readtxt("MyFridge.txt", u.getMyFridgeList());
-		}
-		
-		// 각 음식 매니저 출력
+		// 음식 목록 정렬 후 출력
 		System.out.println("==음식 목록==");
 		while (true){
-			System.out.print("(1)이름순 (2)가격 낮은 순 (3)가격 높은 순 (4)좋아요순 (5)종료: ");//우선 스위치문으로 구분해두었습니다.
+			//우선 스위치문으로 구분해두었습니다.
+			System.out.print("(1)이름순 (2)가격 낮은 순 (3)가격 높은 순 (4)좋아요순 (5)종료: ");
 			int n = scan.nextInt();
 			if (n < 1 || n > 4) break;
 			switch (n){
@@ -90,13 +86,10 @@ public class Store extends Manager {
 			}
 		}
 
-		System.out.println("==사용자 목록==");
+		System.out.println("==사용자 정보==");
 		userMgr.printAll();
 
-		// 로그인 성공할 경우 서치기능 구현
-		if (Login()){
-			searchMenu();
-		}
+		searchMenu();
 	}
 
 	// 검색이 두종류로 나뉨에 따라 searchMenu생성
@@ -111,50 +104,12 @@ public class Store extends Manager {
 					foodMgr.search();
 					break;
 				case 2:
-					fridgeSearch();
+					userMgr.getList().get(0).fridgeSearch(foodMgr);
 					break;
 				default:
 					bool = false;
 			}
 		}
-	}
-
-	// 보유 재료를 하나씩 요소로 사용하여 food매니저가 가지고 있는 food들을 순회하며 재료에 포함되어있는지 확인
-	public void fridgeSearch(){
-		// 현재 구조적 한계로 인해 다중 for문 사용. 추후 수정 예정
-		for (User u: userMgr.getList()){
-			for (String fridge: u.getMyFridgeList()) {
-				for (Food f : foodMgr.getList()) {
-					if (f.matches(fridge))
-						u.getFridgeSearchList().add(f);
-				}
-			}
-		}
-
-		System.out.format("\n==보유한 재료가 포함된 음식 목록==\n");
-		for (User u: userMgr.getList()) {
-			for (Food f: u.getFridgeSearchList()) {
-				f.print();
-			}
-			u.getFridgeSearchList().clear();
-		}
-
-	}
-
-	public boolean Login(){
-		System.out.print("id를 입력해 주세요: ");
-		String id = scan.next();
-		System.out.print("pw를 입력해 주세요: ");
-		String pw = scan.next();
-		// user정보를 가진 리스트를 순회하며 동일한 id와 pw가 존재하는지 확인
-		for (User u: userMgr.getList()){
-			if (u.UserLogin(id, pw)) {
-				System.out.println("Login Succes");
-				return true;
-			}
-		}
-		System.out.println("Login 실패. 프로그램을 종료합니다.");
-		return false;
 	}
 
 	public static void main(String[] args) {

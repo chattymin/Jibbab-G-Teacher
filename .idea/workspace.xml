@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mgr/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mgr/Manager.java" afterDir="false" />
@@ -96,6 +89,8 @@
       <workItem from="1667873550024" duration="385000" />
       <workItem from="1668404063297" duration="4039000" />
       <workItem from="1668408207092" duration="487000" />
+      <workItem from="1668408815912" duration="14000" />
+      <workItem from="1668408980765" duration="1447000" />
     </task>
     <servers />
   </component>
