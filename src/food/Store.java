@@ -1,6 +1,5 @@
 package food;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -11,12 +10,11 @@ import mgr.Manager;
 public class Store extends Manager {
 	public Manager<Food> foodMgr = new Manager<>();
 	public Manager<User> userMgr = new Manager<>();
-	public ArrayList<Manager> totalList = new ArrayList<>();// 각 foodMgr를 전부 담아놓는 리스트
 	
 	Scanner scan = new Scanner(System.in);
 
 	public Store() {
-		// 각각 음식들 매니저 분리
+		// 음식 매니
 		foodMgr.readAll("Foods.txt", new Factory<Food>() {
 			@Override
 			public Food create() {
@@ -33,14 +31,14 @@ public class Store extends Manager {
 		});
 		
 		for (User u : userMgr.getList()) { // user에 foodList(선호 음식), myFridge(보유 재료) 내용 추가
-				u.readtxt("FoodList.txt", u.foodList);
-				u.readtxt("MyFridge.txt", u.myFridge);
+				u.readtxt("FoodList.txt", u.getFoodList());
+				u.readtxt("MyFridge.txt", u.getMyFridgeList());
 		}
 		
 		// 각 음식 매니저 출력
 		System.out.println("==음식 목록==");
 		while (true){
-			System.out.println("(1)이름순 (2)가격 낮은 순 (3)가격 높은 순 (4)좋아요순 (5)종료:");//우선 스위치문으로 구분해두었습니다.
+			System.out.print("(1)이름순 (2)가격 낮은 순 (3)가격 높은 순 (4)좋아요순 (5)종료: ");//우선 스위치문으로 구분해두었습니다.
 			int n = scan.nextInt();
 			if (n < 1 || n > 4) break;
 			switch (n){
@@ -92,31 +90,55 @@ public class Store extends Manager {
 			}
 		}
 
-		// 각 음식들 전부 totalList에 추가
-		totalList.add(foodMgr);
-
 		System.out.println("==사용자 목록==");
 		userMgr.printAll();
 
 		// 로그인 성공할 경우 서치기능 구현
 		if (Login()){
-			totalSearch();
+			searchMenu();
 		}
 	}
 
-	// 종합검색: 나라별 검색, 재료 검색 가리지 않고 모든 음식들 중 kwd에 해당하는 내용 출력
-	public void totalSearch() {
-		String kwd = null;
-		while (true) {
-			System.out.print("\n종합 검색(end입력시 종료) : ");
-			kwd = scan.next();
-			if (kwd.contentEquals("end"))
-				break;
-			System.out.println("====검색 결과====");
-			for (Manager m : totalList) {
-				m.search(m.getList(), kwd);
+	// 검색이 두종류로 나뉨에 따라 searchMenu생성
+	public void searchMenu() {
+		int sort = 0;
+		boolean bool = true;
+		while (bool) {
+			System.out.print("(1)종합 검색 (2)보유 재료로 검색 (그 외)종료: ");
+			sort = scan.nextInt();
+			switch (sort){
+				case 1:
+					foodMgr.search();
+					break;
+				case 2:
+					fridgeSearch();
+					break;
+				default:
+					bool = false;
 			}
 		}
+	}
+
+	// 보유 재료를 하나씩 요소로 사용하여 food매니저가 가지고 있는 food들을 순회하며 재료에 포함되어있는지 확인
+	public void fridgeSearch(){
+		// 현재 구조적 한계로 인해 다중 for문 사용. 추후 수정 예정
+		for (User u: userMgr.getList()){
+			for (String fridge: u.getMyFridgeList()) {
+				for (Food f : foodMgr.getList()) {
+					if (f.matches(fridge))
+						u.getFridgeSearchList().add(f);
+				}
+			}
+		}
+
+		System.out.format("\n==보유한 재료가 포함된 음식 목록==\n");
+		for (User u: userMgr.getList()) {
+			for (Food f: u.getFridgeSearchList()) {
+				f.print();
+			}
+			u.getFridgeSearchList().clear();
+		}
+
 	}
 
 	public boolean Login(){

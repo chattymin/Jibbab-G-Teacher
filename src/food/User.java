@@ -1,10 +1,10 @@
 package food;
 
-import mgr.Factory;
 import mgr.Manageable;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 // 사용자 id와 pw를 만들어두었습니다.
@@ -12,8 +12,10 @@ import java.util.Scanner;
 // ex) id : pdm        pw : 123456
 
 public class User implements Manageable {
-    ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
-    ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
+    private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
+    private ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
+    private HashSet<Food> fridgeSearchList = new HashSet<>();
+
     String ID, PW, name, phoneNumber;
 
     @Override
@@ -72,4 +74,10 @@ public class User implements Manageable {
             return true;
         return false;
     }
+
+    public ArrayList<String> getMyFridgeList() {return myFridge;}
+
+    public ArrayList<String> getFoodList() {return foodList;}
+
+    public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
 }
