@@ -28,13 +28,20 @@ public class Food implements Manageable, Comparable<Food> {
 			ingr = ingr + " " + temp;
 		} //arraylist 사용 안 하고 하는 방식이 더 좋아보여서 했습니다.
 		recipe = scan.next();
+		while (true){
+			temp = scan.next();
+			if (temp.contentEquals("완성"))
+				break;
+			recipe = recipe + " " + temp;
+		}
 		name = scan.next();
 		like = scan.nextInt();
 	}
 
 	@Override
 	public void print() {
-		System.out.format("[%s]%s(%s) - 가격 : %s 재료:%s 조리법:%s 좋아요 수 : %d\n", country, name, type, price, ingr, recipe, like);
+		System.out.format("[%s]%s(%s) - 가격: %s 재료:%s\n 조리법:%s\n 좋아요 수: %d\n",
+				country, name, type, price, ingr, recipe, like);
 	}
 
 	@Override
