@@ -68,19 +68,6 @@ public class Store extends Manager {
 					});
 					foodMgr.printAll();
 					break;
-				case 4://좋아요 순
-					Collections.sort(foodMgr.getList(), new Comparator<Food>() {
-						@Override
-						public int compare(Food o1, Food o2) {
-							if (o1.like < o2.like)
-								return 1;
-							if (o1.like > o2.like)
-								return -1;
-							return 0;
-						}
-					});
-					foodMgr.printAll();
-					break;
 				default:
 					break;
 			}

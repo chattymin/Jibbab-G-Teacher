@@ -1,4 +1,4 @@
-package food;
+package gui;
 
 import java.awt.Dimension;
 
@@ -8,6 +8,7 @@ import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
+import food.Food;
 import mgr.Factory;
 import mgr.Manager;
 
@@ -38,7 +39,7 @@ public class FoodStoreDemo extends JPanel {
     	for (Food f : foodMgr.getList()) // addRow함수로 행 추가
     		tableModel.addRow(f.getTexts());
        	table = new JTable(tableModel);
-        table.setPreferredScrollableViewportSize(new Dimension(800, 220));
+        table.setPreferredScrollableViewportSize(new Dimension(400, 640));
         table.setFillsViewportHeight(true);
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         JScrollPane scrollPane = new JScrollPane(table); // 스크롤 기능 생성 및 추가
