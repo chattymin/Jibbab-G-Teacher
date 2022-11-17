@@ -18,7 +18,7 @@ public class User implements Manageable {
     @Override
     public void read(Scanner scan) {
         name = scan.next();
-        readtxt("FoodList.txt", foodList);
+        readtxt("LikedList.txt", foodList);
         readtxt("MyFridge.txt", myFridge);
     }
   

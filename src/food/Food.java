@@ -13,13 +13,13 @@ public class Food implements Manageable, Comparable<Food> {
 	String recipe; // 조리
 	int like; // 좋아요 수
 
-	// 중식 메인 4000원 면 짜장 0 면요리 짜장면 4
+	// 중식 메인 면 짜장 0 면요리 짜장면 4
 	@Override
 	public void read(Scanner scan) {
 		String temp = null;
 		country = scan.next();
 		type = scan.next();
-		price = scan.nextInt();
+		// price = scan.nextInt();
 		ingr = scan.next();
 		while (true){
 			temp = scan.next();
@@ -30,18 +30,18 @@ public class Food implements Manageable, Comparable<Food> {
 		recipe = scan.next();
 		while (true){
 			temp = scan.next();
-			if (temp.contentEquals("완성"))
+			if (temp.contentEquals("end"))
 				break;
 			recipe = recipe + " " + temp;
 		}
 		name = scan.next();
-		like = scan.nextInt();
+		// like = scan.nextInt();
 	}
 
 	@Override
 	public void print() {
-		System.out.format("[%s]%s(%s) - 가격: %s 재료:%s\n 조리법:%s\n 좋아요 수: %d\n",
-				country, name, type, price, ingr, recipe, like);
+		System.out.format("[%s]%s(%s) - 가격: %s 재료:%s\n 조리법:%s\n",
+				country, name, type, price, ingr, recipe);
 	}
 
 	@Override
@@ -52,8 +52,6 @@ public class Food implements Manageable, Comparable<Food> {
 			return true;
 		if (type.contains(kwd))
 			return true;
-		if ((""+price).contains(kwd))
-			return true;
 		if (ingr.contains(kwd))
 			return true;
 		if (recipe.contains(kwd))
@@ -61,8 +59,7 @@ public class Food implements Manageable, Comparable<Food> {
 		return false;
 	}
 	public String[] getTexts() {  //  행 추가를 위해 객체 데이터를 가져오는 getTexts 메소드
-		return new String[] {name, country, type, "" + price,
-				ingr, recipe, "" + like};
+		return new String[] {name, country, type, ingr, recipe};
 	}
 
 

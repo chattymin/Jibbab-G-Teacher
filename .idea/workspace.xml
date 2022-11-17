@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodList.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Foods.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/FoodStoreDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mgr/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mgr/Manager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +41,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Application.Store">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -90,7 +93,9 @@
       <workItem from="1668404063297" duration="4039000" />
       <workItem from="1668408207092" duration="487000" />
       <workItem from="1668408815912" duration="14000" />
-      <workItem from="1668408980765" duration="1447000" />
+      <workItem from="1668408980765" duration="1550000" />
+      <workItem from="1668608000329" duration="106000" />
+      <workItem from="1668693284691" duration="1686000" />
     </task>
     <servers />
   </component>
