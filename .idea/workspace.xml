@@ -7,8 +7,11 @@
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Foods.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +39,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/이찬영/Desktop/TeamProject/ObjectOrientedTeamG&quot;
-  }
-}</component>
-  <component name="RunManager" selected="애플리케이션.Store">
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Store">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Main" />
+      <module name="ObjectOrientedTeamG" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="food.Main" />
       <module name="ObjectOrientedTeamG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="food.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -62,7 +77,7 @@
       <module name="ObjectOrientedTeamG" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="food.*" />
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -72,8 +87,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션.Store" />
-        <item itemvalue="애플리케이션.Main" />
+        <item itemvalue="Application.Store" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -90,6 +106,13 @@
       <workItem from="1667829833587" duration="1285000" />
       <workItem from="1667837557921" duration="651000" />
       <workItem from="1667873550024" duration="385000" />
+      <workItem from="1668404063297" duration="4039000" />
+      <workItem from="1668408207092" duration="487000" />
+      <workItem from="1668408815912" duration="14000" />
+      <workItem from="1668408980765" duration="1550000" />
+      <workItem from="1668608000329" duration="106000" />
+      <workItem from="1668693284691" duration="1686000" />
+      <workItem from="1668701693167" duration="1182000" />
     </task>
     <servers />
   </component>
