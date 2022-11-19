@@ -18,8 +18,8 @@ public class User implements Manageable {
     @Override
     public void read(Scanner scan) {
         name = scan.next();
-        readtxt("LikedList.txt", foodList);
-        readtxt("MyFridge.txt", myFridge);
+        readtxt("./txt/LikedList.txt", foodList);
+        readtxt("./txt/MyFridge.txt", myFridge);
     }
   
     public void readtxt(String filename, ArrayList<String> list) { // 보유 재료, 선호 음식 파일 입력 메소드
@@ -75,7 +75,5 @@ public class User implements Manageable {
         fridgeSearchList.clear();
     }
 
-    public ArrayList<String> getMyFridgeList() {return myFridge;}
-
-    public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
+    public ArrayList<String> getMyFoodList() {return foodList;}
 }
