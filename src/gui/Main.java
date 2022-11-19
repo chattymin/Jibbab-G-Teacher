@@ -1,9 +1,17 @@
 package gui;
 
+import food.Food;
+import food.User;
+import mgr.Manager;
+
 import javax.swing.JFrame;
 
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
+	public Main(Food food, User user) {
+		new DetailPage(food,user);
+	}
+
 	static void createAndShowGUI() {
         JFrame frame = new JFrame("FoodStoreDemo"); // GUI 창 제목 설정
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
