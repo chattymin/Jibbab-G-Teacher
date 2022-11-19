@@ -16,7 +16,7 @@ public class Store extends Manager {
 
 	public Store() {
 		// 음식 매니저
-		foodMgr.readAll("Foods.txt", new Factory<Food>() {
+		foodMgr.readAll("./txt/Foods.txt", new Factory<Food>() {
 			@Override
 			public Food create() {
 				return new Food();
@@ -25,7 +25,7 @@ public class Store extends Manager {
 
 
 		// 사용자 매니저
-		userMgr.readAll("User.txt", new Factory<User>() {
+		userMgr.readAll("./txt/User.txt", new Factory<User>() {
 			@Override
 			public User create() {
 				return new User();
