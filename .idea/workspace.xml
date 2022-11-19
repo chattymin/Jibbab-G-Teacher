@@ -6,11 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Foods.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/User.txt" beforeDir="false" afterPath="$PROJECT_DIR$/User.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Food.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +31,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,7 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.Store">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Main" />
       <module name="ObjectOrientedTeamG" />
@@ -87,8 +99,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Store" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Store" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -113,6 +125,9 @@
       <workItem from="1668608000329" duration="106000" />
       <workItem from="1668693284691" duration="1686000" />
       <workItem from="1668701693167" duration="1182000" />
+      <workItem from="1668705614874" duration="13820000" />
+      <workItem from="1668854641460" duration="3734000" />
+      <workItem from="1668858394418" duration="2403000" />
     </task>
     <servers />
   </component>

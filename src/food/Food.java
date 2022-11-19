@@ -64,4 +64,8 @@ public class Food implements Manageable, Comparable<Food> {
 	public int compareTo(Food o) {
 		return name.compareTo(o.name);
 	}
+
+	public String getName(){return name;}
+
+	public String getRecipe(){return recipe;}
 }
