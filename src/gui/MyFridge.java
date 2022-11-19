@@ -43,8 +43,9 @@ public class MyFridge extends JFrame {
         downBar.add(fridgeButton);
         downBar.add(likedButton);
 
-        this.add(Fridge);
         this.add(downBar);
+        this.add(Fridge);
+        
         
     }
     
