@@ -22,6 +22,7 @@ public class Store extends Manager {
 			}
 		});
 
+
 		// 사용자 매니저
 		userMgr.readAll("User.txt", new Factory<User>() {
 			@Override
