@@ -75,7 +75,5 @@ public class User implements Manageable {
         fridgeSearchList.clear();
     }
 
-    public ArrayList<String> getMyFridgeList() {return myFridge;}
-
-    public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
+    public ArrayList<String> getMyFoodList() {return foodList;}
 }
