@@ -4,13 +4,16 @@ import mgr.Manageable;
 import mgr.Manager;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Scanner;
 
 public class User implements Manageable {
-    private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
-    private ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
+    private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장용 텍스트
+    private ArrayList<Food> likedList = new ArrayList<>(); // 선호하는 음식 리스트
+    private ArrayList<String> likedSaveFile = new ArrayList<>(); //선호하는 음식 저장용 텍스트
     private HashSet<Food> fridgeSearchList = new HashSet<>();
 
     String name;
@@ -18,11 +21,12 @@ public class User implements Manageable {
     @Override
     public void read(Scanner scan) {
         name = scan.next();
-        readtxt("./txt/LikedList.txt", foodList);
+        readtxt("./txt/LikedSaveFile.txt", likedSaveFile);
         readtxt("./txt/MyFridge.txt", myFridge);
     }
-  
-    public void readtxt(String filename, ArrayList<String> list) { // 보유 재료, 선호 음식 파일 입력 메소드
+    
+    // 보유 재료, 선호 음식 파일 입력 메소드
+    public void readtxt(String filename, ArrayList<String> list) { 
     	Scanner filein = openFile(filename);
     	String kwd = null;
 		while (filein.hasNext()) {
@@ -31,7 +35,40 @@ public class User implements Manageable {
 		}
 		filein.close();
 	}
+    // filewriter로 선호음식 텍스트 파일에 음식 추가로 저장
+	public void saveLikedFood(String filename) throws IOException { 
+    	FileWriter fw = new FileWriter(filename, true);
+    	String fo = null;
+    	for (Food f : likedList)
+    		for (String s : likedSaveFile)
+    			if(!f.name.contains(s)) {
+    				fo = " " + f.name;
+    			}
+    			else {
+    				System.out.println("중복 음식입니다!");
+    				fw.close();
+    			}
+    	fw.write(fo);
+    	fw.close();
+    }
     
+	// 위 savelikedfood와 같은 구조의 savemyfridge 메소드 (보유 재료 비교 후 추가)
+	public void saveMyFridge(String filename, Scanner scan) throws IOException {
+		FileWriter fw = new FileWriter(filename, true);
+    	String fridge = null;
+    	fridge = scan.next();
+    	for (String s : myFridge)
+    		if(!s.contains(fridge)) {
+    			fridge = " " + fridge;
+    		}
+    		else {
+    			System.out.println("중복 재료입니다!");
+    			fw.close();
+    		}
+    	fw.write(fridge);
+    	fw.close();
+	}
+	
 	Scanner openFile(String filename) {
 		Scanner filein = null;
 		try {
@@ -42,11 +79,12 @@ public class User implements Manageable {
 		}
 		return filein;
 	}
+	
 
 	@Override
     public void print() {
         System.out.format("[%s] \n 선호 음식 : ", name);
-        for (String s : foodList)
+        for (String s : likedSaveFile)
         	System.out.print(s + " ");
         System.out.println();
         System.out.printf(" 보유 재료 : ");
@@ -75,5 +113,11 @@ public class User implements Manageable {
         fridgeSearchList.clear();
     }
 
-    public ArrayList<String> getMyFoodList() {return foodList;}
+    public ArrayList<String> getMyFridgeList() {return myFridge;}
+    
+    public ArrayList<String> getlikedSaveFile() {return likedSaveFile;}
+
+    public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
+    
+    public ArrayList<Food> getlikedList() {return likedList;}
 }

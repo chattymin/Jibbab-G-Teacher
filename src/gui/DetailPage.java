@@ -112,7 +112,7 @@ public class DetailPage{
         JButton foodLikedImg;
 
         // 좋아요 한 음식인지 확인 후 하트 모양 결정
-        if(user.getMyFoodList().contains(name)){
+        if(user.getlikedSaveFile().contains(name)){
             foodLikedImg = new JButton(fullHeartIcon);
         }else{
             foodLikedImg = new JButton(emptyHeartIcon);
