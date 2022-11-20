@@ -9,7 +9,8 @@ import javax.swing.JFrame;
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
 	public Main(Food food, User user) {
-		new DetailPage(food,user);
+		// new DetailPage(food,user);
+		new MyFridge(food,user);
 	}
 
 	static void createAndShowGUI() {
