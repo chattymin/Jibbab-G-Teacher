@@ -1,7 +1,9 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -9,6 +11,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
 import food.Food;
+import food.User;
 import mgr.Factory;
 import mgr.Manager;
 

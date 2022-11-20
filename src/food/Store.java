@@ -1,5 +1,6 @@
 package food;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -23,7 +24,6 @@ public class Store extends Manager {
 			}
 		});
 
-
 		// 사용자 매니저
 		userMgr.readAll("./txt/User.txt", new Factory<User>() {
 			@Override
@@ -31,9 +31,6 @@ public class Store extends Manager {
 				return new User();
 				}
 		});
-
-		// 기능 구현여부 확인을 위해 Store 클래스에서 gui를 호출했습니다.
-
 		/*
 		// 음식 목록 정렬 후 출력
 		System.out.println("==음식 목록==");
@@ -82,11 +79,29 @@ public class Store extends Manager {
 		userMgr.printAll();
 
 		searchMenu();
-		*/
+		
+		//찜목록 추가 부분
+    	System.out.println("찜할 음식을 입력해주세요: ");
+    	addLikedFood();
+    	
+    	//보유 재료 추가 부분 
+    	System.out.println("보유 재료를 입력해주세요: ");
+    	try {
+			userMgr.getList().get(0).saveMyFridge("./txt/MyFridge.txt", scan);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	System.out.println("----------보유 재료-----------");
+    	for (String s : userMgr.getList().get(0).getMyFridgeList())
+    		System.out.print(s + " ");
+    	*/
 
 		// gui의 메인 클래스를 호출하는 것이고, food객체, user객체 입니다.
 		// 박동민의 page 형식에 맞는 호출 값이기 때문에 다른 분들은 다른 형식의 호출을 진행하셔도 됩니다.
 		new Main(foodMgr.getList().get(0),userMgr.getList().get(0));
+		//new Main(this);
+
 	}
 
 	// 검색이 두종류로 나뉨에 따라 searchMenu생성
@@ -108,6 +123,25 @@ public class Store extends Manager {
 			}
 		}
 	}
+	
+	// 음식을 입력받아서 선호음식 리스트에 저장, 동시에 세이브텍스트파일에 추가
+	void addLikedFood() {
+		String kwd = null;
+    	kwd = scan.next();
+    	Food fo = new Food(); 
+    	fo = foodMgr.find(kwd);
+    	userMgr.getList().get(0).getlikedList().add(fo);
+    	try {
+			userMgr.getList().get(0).saveLikedFood("./txt/likedSaveFile.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	System.out.println("----------찜 목록----------");
+    	for (String s : userMgr.getList().get(0).getlikedSaveFile())
+    		System.out.print(s + " ");
+    	System.out.println();
+    }
 
 	public static void main(String[] args) {
 		new Store();
