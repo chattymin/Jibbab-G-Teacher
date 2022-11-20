@@ -121,7 +121,7 @@ public class Store extends Manager {
 		}
 	}
 	
-	// 음식을 입력받아서 선호음식 리스트에 저장하고 세이브텍스트파일에 추가하여 출력시키는 메소드
+	// 음식을 입력받아서 선호음식 리스트에 저장, 동시에 세이브텍스트파일에 추가
 	void addLikedFood() {
 		String kwd = null;
     	kwd = scan.next();

@@ -39,6 +39,8 @@ public class User implements Manageable {
 	public void saveLikedFood(String filename) throws IOException { 
     	FileWriter fw = new FileWriter(filename, true);
     	String fo = null;
+    	// 실제로 찜한 food 객체가 들어가있는 likelist와 텍스트파일인 likesavefile과 비교해서
+    	// 리스트의 들어가있는 음식들 중에서 세이브파일에 포함되지 않은 음식이 있으면 fo에 음식이름을 저장하고 텍스트파일에 추가
     	for (Food f : likedList)
     		for (String s : likedSaveFile)
     			if(!f.name.contains(s)) {
