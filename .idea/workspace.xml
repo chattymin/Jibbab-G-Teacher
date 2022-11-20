@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/BasicFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/BasicFormat.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/DetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DetailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/LikedSaveFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedSaveFile.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +123,8 @@
       <workItem from="1668854641460" duration="3734000" />
       <workItem from="1668858394418" duration="8174000" />
       <workItem from="1668933969081" duration="472000" />
+      <workItem from="1668949573770" duration="2556000" />
+      <workItem from="1668952143124" duration="340000" />
     </task>
     <servers />
   </component>

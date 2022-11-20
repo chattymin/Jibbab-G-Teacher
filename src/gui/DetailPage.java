@@ -4,15 +4,21 @@ import food.Food;
 import food.User;
 
 import java.awt.event.*;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.*;
 
 public class DetailPage{
-
+    JButton foodLikedImg;
     public DetailPage(Food food, User user){
         // JFrame에 기본 포멧을 New 해주시고, 해당 frame에 추가적으로 작성해서 덧붙이시면 됩니다.
         JFrame frame = new BasicFormat();
         // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요
         frame.setTitle("상세 정보 창");
+
+        // 하트 실시간 반영을 위한 리스트 재구성
+        user.getlikedSaveFile().clear();
+        user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
 
         // 임시로 foodMgr의 첫번째 food를 매개변수로 사용했습니다.
         // 이후 정상적으로 연결 할 경우 음식을 클릭 했을때 해당 음식을 매개변수로 전달해줘야 합니다.
@@ -39,7 +45,7 @@ public class DetailPage{
         // 좋아요 여부에 따른 하트 이미지 선정
         ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
         ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
-        JButton foodLikedImg;
+
 
         // 좋아요 한 음식인지 확인 후 하트 모양 결정
         if(user.getlikedSaveFile().contains(name)){
@@ -62,8 +68,33 @@ public class DetailPage{
             @Override
             public void actionPerformed(ActionEvent e) {
                 // file writer를 통해 찜 목록에서 삭제 or 추가 기능 구현 필요
+                if (!user.getlikedSaveFile().contains(name)){ // 찜 안한 음식 찜하기
+                    try {
+                        FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                        for (String str: user.getlikedSaveFile()){
+                            fw.write(str + " ");
+                        }
+                        fw.write(name);
+                        fw.close();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }else { // 찜했던 음식 목록에서 삭제
+                    try {
+                        FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                        for (String str: user.getlikedSaveFile()){
+                            if (str.contentEquals(name))
+                                continue;
+                            fw.write(str + " ");
+                        }
+                        fw.close();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
                 new DetailPage(food,user);
                 frame.dispose();
+
             }
         });
 
