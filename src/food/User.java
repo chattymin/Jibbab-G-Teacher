@@ -76,4 +76,5 @@ public class User implements Manageable {
     }
 
     public ArrayList<String> getMyFoodList() {return foodList;}
+    public ArrayList<String> getMyFridge() {return myFridge;}
 }
