@@ -19,7 +19,9 @@ public class Main {
 	public Main(Food food, User user) {
 		new DetailPage(food, user);
 	}
+	public Main(){
 
+	}
 	static void createAndShowGUI() {
         JFrame frame = new JFrame("FoodStoreDemo"); // GUI 창 제목 설정
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -31,10 +33,11 @@ public class Main {
     }
 	 // GUI 실행 메인 함수 부분
 	 public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+		new MainPage();
+		/*javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				createAndShowGUI();
 			}
-		});
+		});*/
 	}
 }

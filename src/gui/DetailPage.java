@@ -13,7 +13,6 @@ public class DetailPage{
         JFrame frame = new BasicFormat();
         // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요
         frame.setTitle("상세 정보 창");
-
         // 임시로 foodMgr의 첫번째 food를 매개변수로 사용했습니다.
         // 이후 정상적으로 연결 할 경우 음식을 클릭 했을때 해당 음식을 매개변수로 전달해줘야 합니다.
         // ex) DetailPage(answerFood, user);

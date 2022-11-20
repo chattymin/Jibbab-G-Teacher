@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
+    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/BasicFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/BasicFormat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/BasicFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BasicFormat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/DetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DetailPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SearchSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchSelection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -49,13 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yun10/Desktop/GIT/ObjectOrientedTeamG&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yun10\Desktop\GIT\ObjectOrientedTeamG\image" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Store">
+  <component name="RunManager" selected="애플리케이션.Store">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Main" />
       <module name="ObjectOrientedTeamG" />
@@ -95,11 +100,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Store" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="애플리케이션.Store" />
+        <item itemvalue="애플리케이션.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -125,8 +139,7 @@
       <workItem from="1668701693167" duration="1182000" />
       <workItem from="1668705614874" duration="13820000" />
       <workItem from="1668854641460" duration="3734000" />
-      <workItem from="1668858394418" duration="8174000" />
-      <workItem from="1668933969081" duration="472000" />
+      <workItem from="1668858394418" duration="2403000" />
     </task>
     <servers />
   </component>
