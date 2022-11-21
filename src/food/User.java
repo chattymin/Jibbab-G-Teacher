@@ -10,7 +10,8 @@ import java.util.Scanner;
 
 public class User implements Manageable {
     private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장 리스트
-    private ArrayList<String> foodList = new ArrayList<>(); //선호하는 음식 리스트
+    private ArrayList<String> ingredients = new ArrayList<>(); // 모든 재료 목록 리스트
+    private ArrayList<String> foodList = new ArrayList<>(); // 선호하는 음식 리스트
     private HashSet<Food> fridgeSearchList = new HashSet<>();
 
     String name;
@@ -20,6 +21,7 @@ public class User implements Manageable {
         name = scan.next();
         readtxt("./txt/LikedList.txt", foodList);
         readtxt("./txt/MyFridge.txt", myFridge);
+        readtxt("./txt/Ingredients.txt", ingredients);
     }
   
     public void readtxt(String filename, ArrayList<String> list) { // 보유 재료, 선호 음식 파일 입력 메소드
@@ -77,4 +79,5 @@ public class User implements Manageable {
 
     public ArrayList<String> getMyFoodList() {return foodList;}
     public ArrayList<String> getMyFridge() {return myFridge;}
+    public ArrayList<String> getIngredients() {return ingredients;}
 }

@@ -22,7 +22,7 @@ public class MyFridge {
     Image background = new ImageIcon("./image/emptyFridge.png").getImage();
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
-    public MyFridge(Food food, User user) {       
+    public MyFridge(User user) {       
         ArrayList<String> myFridge = user.getMyFridge();
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
@@ -51,9 +51,9 @@ public class MyFridge {
     // 재료의 키워드와 이미지를 해시로 저장
     public void setHash(HashMap hash, User user) {
         // 김치 양파 파 버섯 감자 참치 스팸
+        ArrayList<String> ingredients = user.getIngredients();
 
-        ArrayList<String> myFridge = user.getMyFridge();
-        for(String ingre : myFridge) {
+        for(String ingre : ingredients) {
             ImageIcon tmpIcon = new ImageIcon("./image/ingredients/" + ingre + ".png");
             Image tmpImg = tmpIcon.getImage();
             Image img = tmpImg.getScaledInstance(60, 60, Image.SCALE_SMOOTH);
