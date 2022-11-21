@@ -2,15 +2,13 @@ package gui;
 
 import food.Food;
 import food.User;
-import mgr.Factory;
-import mgr.Manager;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class SearchResult {
+public class LikedList {
 
-    public SearchResult(Manager<Food> foodMgr,User user,String kwd){
+    public LikedList(User user, String kwd){
 
         JFrame frame = new BasicFormat();
         frame.setTitle("검색 결과");
@@ -18,7 +16,7 @@ public class SearchResult {
         layout.setVgap(10);
         frame.setLayout(layout);
 
-        for (Food f : foodMgr.getList()){
+        for (Food f : user.getlikedList()){
 
             if (f.matches(kwd)){
                 JPanel panel = new JPanel();
@@ -79,3 +77,4 @@ public class SearchResult {
     }
 
 }
+
