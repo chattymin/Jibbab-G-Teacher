@@ -16,18 +16,19 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 
 import food.Food;
+import food.Store;
 import food.User;
 
 public class MyFridge {
     Image background = new ImageIcon("./image/emptyFridge.png").getImage();
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
-    public MyFridge(User user) {       
+    public MyFridge(Store store) {       
         ArrayList<String> myFridge = user.getMyFridge();
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
         // System.out.println(HMyIngre.get("짜장"));
-        JFrame frame = new BasicFormat();  
+        JFrame frame = new BasicFormat(store);  
         frame.setTitle("내 냉장고");
 
         JPanel buttonPanel = new ImagePanel();

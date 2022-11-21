@@ -1,6 +1,9 @@
 package gui;
 
 import javax.swing.*;
+
+import food.Store;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +11,7 @@ import java.awt.event.ActionListener;
 public class BasicFormat extends JFrame{
     //저희 프로그램의 기본 포멧을 여기에 만들어뒀고, 호출해서 사용하시면 됩니다.
 
-    public BasicFormat(){
+    public BasicFormat(Store store){
     //버튼을 만들 패널
         JPanel buttonPanel = new JPanel();
         buttonPanel.setVisible(true);
@@ -24,7 +27,7 @@ public class BasicFormat extends JFrame{
         home.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new MainPage();
+                new MainPage(store);
                 dispose();
             }
         });

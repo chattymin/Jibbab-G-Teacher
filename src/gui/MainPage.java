@@ -4,14 +4,15 @@ import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
 import food.Food;
+import food.Store;
 import food.User;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainPage extends JFrame {
-    public MainPage() {
-        JFrame frame = new BasicFormat();
+    public MainPage(Store store) {
+        JFrame frame = new BasicFormat(store);
         frame.setTitle("메인화면");
 
         // Tips패널

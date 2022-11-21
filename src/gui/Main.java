@@ -13,23 +13,8 @@ import javax.swing.JPanel;
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
 	public Main(Store store) {
-		new SearchSelection(store);
-	}
-
-	public Main(Food food, User user) {
-		new DetailPage(food, user);
-	}
-
-	public Main(User user) {
-		new MyFridge(user);
-	}
-	
-	//검색결과
-	public Main(Manager<Food> foodMgr, User user) {
-		//Scanner scan = new Scanner(System.in);
-		//String kwd = scan.next();
-		String kwd = "메인";
-		new SearchResult(foodMgr,user,kwd);
+		new MainPage(store);
+		
 	}
 
 	static void createAndShowGUI() {
@@ -41,13 +26,4 @@ public class Main {
         frame.pack();
         frame.setVisible(true);
     }
-	 // GUI 실행 메인 함수 부분
-	 public static void main(String[] args) {
-		new MainPage();
-		/*javax.swing.SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				createAndShowGUI();
-			}
-		});*/
-	}
 }
