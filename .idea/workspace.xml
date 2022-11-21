@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Tips1.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/image/Tips1.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/Tips2.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/image/Tips2.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

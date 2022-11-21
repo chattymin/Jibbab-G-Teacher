@@ -26,7 +26,11 @@ public class MainPage extends JFrame {
         FirstImg.setBounds(0, 0, 390, 200);
 
         int randomNumber2;
-        randomNumber2 = (int) (Math.random()*2+1);
+        randomNumber2 = (int)(Math.random()*2+1);
+        while (randomNumber2 != randomNumber1){
+            randomNumber2 = (int)(Math.random()*2+1);
+        }
+        System.out.println("2:" + randomNumber2 + "1: " + randomNumber1);
         ImageIcon tipImgIcon2 = new ImageIcon("./image/Tips"+randomNumber2+".JPEG");
         JLabel SecTip = new JLabel(tipImgIcon2);
         SecTip.setBounds(0, 210, 390, 200);
