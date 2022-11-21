@@ -5,7 +5,7 @@ import food.Store;
 import food.User;
 import mgr.Manager;
 
-import java.awt.Dimension;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,6 +15,11 @@ public class Main {
 	public Main(Store store) {
 		new MainPage(store);
 		
+	}
+
+	//좋아요 목록
+	public Main(User user, String kwd){
+		new LikedList(user,kwd);
 	}
 
 	static void createAndShowGUI() {
