@@ -48,10 +48,11 @@ public class Main {
     }
 	 // GUI 실행 메인 함수 부분
 	 public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(new Runnable() {
+		new MainPage();
+		/*javax.swing.SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				createAndShowGUI();
 			}
-		});
+		});*/
 	}
 }

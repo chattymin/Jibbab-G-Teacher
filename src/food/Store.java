@@ -104,11 +104,16 @@ public class Store extends Manager {
 		//new Main(userMgr.getList().get(0));
 		//new Main(foodMgr.getList().get(0),userMgr.getList().get(0));
 
-		//조례은 검색결과
-		new Main(foodMgr,userMgr.getList().get(0));
+		//조혜은 검색결과
+		// new Main(foodMgr, userMgr.getList().get(0));
 		//좋아요 목록
 		//String kwd = "메인";
 		//new Main(userMgr.getList().get(0),kwd);
+		//검색결과
+		// 혜은님거
+		//new Main(foodMgr,userMgr.getList().get(0));
+		//new Main(this);
+		//new Main();
 
 	}
 
