@@ -79,5 +79,7 @@ public class Food implements Manageable, Comparable<Food> {
 	public String getIngr(){return ingr;}
 
 	public ArrayList<String> getRecipes(){return recipes;}
+	public String getType(){return type;}
+	public String getCountry(){return country;}
 }
 
