@@ -70,4 +70,8 @@ public class Food implements Manageable, Comparable<Food> {
 	public String getRecipe(){return recipe;}
 
 	public String getIngr(){return ingr;}
+
+	public String getType(){return type;}
+
+	public String getCountry(){return country;}
 }

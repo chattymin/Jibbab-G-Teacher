@@ -5,11 +5,18 @@ import food.User;
 import mgr.Manager;
 
 import javax.swing.JFrame;
+import java.util.Scanner;
 
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
-	public Main(Food food, User user) {
-		new DetailPage(food,user);
+	//public Main(Food food, User user) {new DetailPage(food,user);}
+
+	//검색결과
+	public Main(Manager<Food> foodMgr, User user) {
+		//Scanner scan = new Scanner(System.in);
+		//String kwd = scan.next();
+		String kwd = "메인";
+		new SearchResult(foodMgr,user,kwd);
 	}
 
 	static void createAndShowGUI() {
