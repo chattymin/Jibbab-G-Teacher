@@ -19,6 +19,7 @@ public class BasicFormat extends JFrame{
         ImageIcon homeImg = new ImageIcon("./image/home.png");
         JButton home =  new JButton("home",homeImg);
         home.setBorderPainted(false); // 버튼 테두리 설정해제
+        home.setContentAreaFilled(false); // 뒤의 버튼 배경(?)이 계속 생겨서 써놓은 메소드입니다
         home.setBounds(10,5,90,90);
         home.addActionListener(new ActionListener() {
             @Override
@@ -32,11 +33,12 @@ public class BasicFormat extends JFrame{
         ImageIcon searchImg = new ImageIcon("./image/search.png");
         JButton search =  new JButton(searchImg);
         search.setBorderPainted(false); // 버튼 테두리 설정해제
+        search.setContentAreaFilled(false);
         search.setBounds(110,5,90,90);
         search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new SearchPage();
+            	// new SearchPage;
                 dispose();
             }
         });
@@ -45,6 +47,7 @@ public class BasicFormat extends JFrame{
         ImageIcon fridgeImg = new ImageIcon("./image/fridge.png");
         JButton fridge =  new JButton(fridgeImg);
         fridge.setBorderPainted(false); // 버튼 테두리 설정해제
+        fridge.setContentAreaFilled(false);
         fridge.setBounds(200,5,90,90);
         fridge.addActionListener(new ActionListener() {
             @Override
@@ -56,8 +59,10 @@ public class BasicFormat extends JFrame{
 
         // likeButton
         ImageIcon likeImg = new ImageIcon("./image/like.png");
+        Image likeImage = likeImg.getImage();
         JButton like =  new JButton(likeImg);
         like.setBorderPainted(false); // 버튼 테두리 설정해제
+        like.setContentAreaFilled(false);
         like.setBounds(290,5,90,90);
         like.addActionListener(new ActionListener() {
             @Override
