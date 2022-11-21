@@ -24,7 +24,7 @@ public class BasicFormat extends JFrame{
         home.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new MainPage();
+                new MainPage();
                 dispose();
             }
         });
@@ -38,7 +38,7 @@ public class BasicFormat extends JFrame{
         search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	// new SearchPage;
+            	//new SearchPage;
                 dispose();
             }
         });

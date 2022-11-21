@@ -22,9 +22,7 @@ import food.Store;
 // 검색 종류를 선택하는 검색선택 gui 구현 화면입니다
 public class SearchSelection {
 	public SearchSelection(Store store) {
-		// JFrame에 기본 포멧을 New 해주시고, 해당 frame에 추가적으로 작성해서 덧붙이시면 됩니다.
         JFrame frame = new BasicFormat();
-        // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요
         frame.setTitle("검색 종류 선택");
         
 		JPanel searchMenu = new JPanel();

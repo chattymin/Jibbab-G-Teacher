@@ -106,6 +106,9 @@ public class Store extends Manager {
 		//검색결과
 		// 혜은님거
 		//new Main(foodMgr,userMgr.getList().get(0));
+		//new Main(this);
+		//new Main();
+
 	}
 
 	// 검색이 두종류로 나뉨에 따라 searchMenu생성
