@@ -102,6 +102,10 @@ public class Store extends Manager {
 		new Main(foodMgr.getList().get(0),userMgr.getList().get(0));
 		// 이찬영 내 냉장고 페이지 호출
 		//new Main(userMgr.getList().get(0));
+		//new Main(foodMgr.getList().get(0),userMgr.getList().get(0));
+		//검색결과
+		// 혜은님거
+		//new Main(foodMgr,userMgr.getList().get(0));
 	}
 
 	// 검색이 두종류로 나뉨에 따라 searchMenu생성

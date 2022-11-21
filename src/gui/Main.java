@@ -23,6 +23,14 @@ public class Main {
 	public Main(User user) {
 		new MyFridge(user);
 	}
+	
+	//검색결과
+	public Main(Manager<Food> foodMgr, User user) {
+		//Scanner scan = new Scanner(System.in);
+		//String kwd = scan.next();
+		String kwd = "메인";
+		new SearchResult(foodMgr,user,kwd);
+	}
 
 	static void createAndShowGUI() {
         JFrame frame = new JFrame("FoodStoreDemo"); // GUI 창 제목 설정
