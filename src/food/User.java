@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class User implements Manageable {
+    private ArrayList<String> ingredients = new ArrayList<>(); // 모든 재료 목록 리스트
+    private ArrayList<String> foodList = new ArrayList<>(); // 선호하는 음식 리스트
     private ArrayList<String> myFridge = new ArrayList<>(); // 보유 재료 저장용 텍스트
     private ArrayList<Food> likedList = new ArrayList<>(); // 선호하는 음식 리스트
     private ArrayList<String> likedSaveFile = new ArrayList<>(); //선호하는 음식 저장용 텍스트
@@ -23,6 +25,7 @@ public class User implements Manageable {
         name = scan.next();
         readtxt("./txt/LikedSaveFile.txt", likedSaveFile);
         readtxt("./txt/MyFridge.txt", myFridge);
+        readtxt("./txt/Ingredients.txt", ingredients);
     }
     
     // 보유 재료, 선호 음식 파일 입력 메소드
@@ -115,11 +118,12 @@ public class User implements Manageable {
         fridgeSearchList.clear();
     }
 
+    public ArrayList<String> getMyFoodList() {return foodList;}
+    public ArrayList<String> getMyFridge() {return myFridge;}
+    public ArrayList<String> getIngredients() {return ingredients;}
+	// getMyFridgeList 삭제
     public ArrayList<String> getMyFridgeList() {return myFridge;}
-    
     public ArrayList<String> getlikedSaveFile() {return likedSaveFile;}
-
     public HashSet<Food> getFridgeSearchList() {return fridgeSearchList;}
-    
     public ArrayList<Food> getlikedList() {return likedList;}
 }

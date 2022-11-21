@@ -20,6 +20,10 @@ public class Main {
 		new DetailPage(food, user);
 	}
 
+	public Main(User user) {
+		new MyFridge(user);
+	}
+
 	static void createAndShowGUI() {
         JFrame frame = new JFrame("FoodStoreDemo"); // GUI 창 제목 설정
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
