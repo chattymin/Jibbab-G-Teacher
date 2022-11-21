@@ -1,5 +1,6 @@
 package food;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
 import mgr.Manageable;
@@ -9,6 +10,7 @@ public class Food implements Manageable, Comparable<Food> {
 	String name; // 음식 이름
 	String type; // 타입 ex)메인
 	String ingr; // ingredient 재료
+	ArrayList<String> recipes = new ArrayList<>();
 	String recipe; // 조리
 	int price = 10; // 정렬 수정하는 분이 맞춰서 수정해주세요..
 
@@ -28,6 +30,11 @@ public class Food implements Manageable, Comparable<Food> {
 		recipe = scan.next();
 		while (true){
 			temp = scan.next();
+			if (temp.contentEquals("enter")) {
+				recipes.add(recipe);
+				recipe = "";
+				continue;
+			}
 			if (temp.contentEquals("완성"))
 				break;
 			recipe = recipe + " " + temp;
@@ -70,4 +77,7 @@ public class Food implements Manageable, Comparable<Food> {
 	public String getRecipe(){return recipe;}
 
 	public String getIngr(){return ingr;}
+
+	public ArrayList<String> getRecipes(){return recipes;}
 }
+

@@ -1,15 +1,27 @@
 package gui;
 
 import food.Food;
+import food.Store;
 import food.User;
 import mgr.Manager;
 
+import java.awt.Dimension;
+
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
+	public Main(Store store) {
+		new SearchSelection(store);
+	}
+
 	public Main(Food food, User user) {
-		new DetailPage(food,user);
+		new DetailPage(food, user);
+	}
+
+	public Main(User user) {
+		new MyFridge(user);
 	}
 
 	static void createAndShowGUI() {
