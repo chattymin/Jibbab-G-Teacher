@@ -30,7 +30,11 @@ public class DetailPage{
         // text
         JLabel foodName = new JLabel(name);
 
-        JTextArea foodRecipe = new JTextArea(recipe);
+        //JTextArea foodRecipe = new JTextArea(recipe);
+        JTextArea foodRecipe = new JTextArea();
+        for (String str: food.getRecipes()){
+            foodRecipe.append(str+"\n");
+        }
         foodRecipe.setEnabled(false); // 내용 수정 불가
         foodRecipe.setLineWrap(true); // 자동 줄바꿈
 
