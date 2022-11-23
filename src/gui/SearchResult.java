@@ -9,8 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SearchResult {
-
     public SearchResult(Manager<Food> foodMgr,User user,String kwd){
+        /*
         JFrame frame = new BasicFormat();
         frame.setTitle("검색 결과");
         GridLayout layout = new GridLayout(0,1);
@@ -74,6 +74,7 @@ public class SearchResult {
         }
 
         frame.setVisible(true);
-    }
 
+         */
+    }
 }

@@ -20,10 +20,12 @@ import food.Store;
 import food.User;
 
 public class MyFridge {
+
     Image background = new ImageIcon("./image/emptyFridge.png").getImage();
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
     public MyFridge(Store store) {
+        /*
         ArrayList<String> myFridge = user.getMyFridge();
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
@@ -47,6 +49,8 @@ public class MyFridge {
         frame.setVisible(true);
         // scrollPane.setViewportView(buttonPanel);
         frame.add(buttonPanel);
+
+         */
     }
 
     // 재료의 키워드와 이미지를 해시로 저장
