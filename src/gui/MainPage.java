@@ -46,10 +46,11 @@ public class MainPage extends JFrame {
 
         frame.add(TipsPanel);
 
-        // 리스트 설정 패널
+       // 리스트 설정 패널
         JPanel MainButtonPanel = new JPanel();
         MainButtonPanel.setLayout(null);
         MainButtonPanel.setBounds(5, 420, 390, 90);
+
         //이미지를 넣어보고 싶었는데 사이즈이슈로 그냥 글씨나오는 패널로 할게요...
         JButton LikedListModify = new JButton("찜 수정");
         LikedListModify.setBounds(0, 5, 190, 80);
@@ -61,6 +62,21 @@ public class MainPage extends JFrame {
         MainButtonPanel.add(FridgeListModify);
 
         frame.add(MainButtonPanel);
+         /*
+        ImageIcon fridgeEditImg = new ImageIcon("./image/001.jpg");
+        JLabel Eidt1 = new JLabel(fridgeEditImg);
+        Eidt1.setBounds(200, 5, 190, 80);
+        /*JButton fridgeEdit =  new JButton(fridgeEditImg);
+        fridgeEdit.setBorderPainted(false); // 버튼 테두리 설정해제
+        fridgeEdit.setContentAreaFilled(false);
+        fridgeEdit.setBounds(200, 5, 80, 80);
+        fridgeEdit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //new MyFridge(store);
+                dispose();
+            }
+        });*/
 
         // 최종 설정
         frame.setVisible(true);
