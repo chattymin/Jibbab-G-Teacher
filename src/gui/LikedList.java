@@ -1,6 +1,7 @@
 package gui;
 
 import food.Food;
+import food.Store;
 import food.User;
 
 import javax.swing.*;
@@ -8,73 +9,63 @@ import java.awt.*;
 
 public class LikedList {
 
-    public LikedList(User user, String kwd){
+    public LikedList(Store store) {
 
-        JFrame frame = new BasicFormat();
-        frame.setTitle("검색 결과");
-        GridLayout layout = new GridLayout(0,1);
-        layout.setVgap(10);
-        frame.setLayout(layout);
+        User user = store.userMgr.getList().get(0);
+        JFrame frame = new BasicFormat(store);
+        frame.setTitle("좋아요 목록");
+        JPanel spanel = new JPanel();
 
         for (Food f : user.getlikedList()){
 
-            if (f.matches(kwd)){
-                JPanel panel = new JPanel();
-                JPanel panel1 = new JPanel();
-                JPanel panel2 = new JPanel();
-                JPanel panel3 = new JPanel();
+            JPanel panel = new JPanel();
+            JPanel panel1 = new JPanel();
+            JPanel panel2 = new JPanel();
+            JPanel panel3 = new JPanel();
 
 
-                BorderLayout layout1 = new BorderLayout();
-                JPanel panel12 = new JPanel(new BorderLayout());
-                panel.setLayout(layout1);
+            JPanel panel12 = new JPanel();
+            panel.setLayout(null);
 
-                String name = f.getName();
-                String type = f.getType();
-                String country = f.getCountry();
-                String ingr = f.getIngr();
+            String name = f.getName();
+            String type = f.getType();
+            String country = f.getCountry();
+            String ingr = f.getIngr();
 
 
-                ImageIcon icon = new ImageIcon("./image/"+name+".png");
-                JLabel foodImg = new JLabel(icon);
-                panel1.add(foodImg);
-                panel12.add("West",panel1);
+            ImageIcon icon = new ImageIcon("./image/"+name+".png");
+            JLabel foodImg = new JLabel(icon);
 
-                JLabel foodName = new JLabel(name);
-                JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료"+ingr);
-                foodInfo.setEnabled(false);
-                foodInfo.setLineWrap(true);
-                GridLayout layout2 = new GridLayout(2,1);
-                panel2.setLayout(layout2);
-                panel2.add(foodName);
-                panel2.add(foodInfo);
-                panel1.add("East",panel2);
+            JLabel foodName = new JLabel(name);
+            JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료"+ingr);
+            foodInfo.setEnabled(false);
+            foodInfo.setLineWrap(true);
 
-                ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
-                ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
-                JButton foodLikedImg;
-                if (user.getMyFoodList().contains(name))
-                    foodLikedImg = new JButton(fullHeartIcon);
-                else
-                    foodLikedImg = new JButton(emptyHeartIcon);
-                foodLikedImg.setBorderPainted(false);
-                foodImg.setBounds(10,10,160,150);
-                foodLikedImg.setBounds(350,10,40,40);
-                foodName.setBounds(180,10,160,40);
-                foodInfo.setBounds(180,60,210,100);
-                panel3.add(foodLikedImg);
+            ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
+            ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
+            JButton foodLikedImg;
+            if (user.getMyFoodList().contains(name))
+                foodLikedImg = new JButton(fullHeartIcon);
+            else
+                foodLikedImg = new JButton(emptyHeartIcon);
+            foodLikedImg.setBorderPainted(false);
+            foodImg.setBounds(10,10,160,150);
+            foodLikedImg.setBounds(350,10,40,40);
+            foodName.setBounds(180,10,160,40);
+            foodInfo.setBounds(180,60,210,100);
 
-                panel.add("West",panel12);
-                panel.add("East",panel3);
-
-                frame.add(panel);
-            }
+            panel.add(foodName);
+            panel.add(foodInfo);
+            panel.add(foodImg);
+            panel.add(foodLikedImg);
+            spanel.add(panel);
 
         }
-
+        frame.add(spanel);
+        JScrollPane s = new JScrollPane(spanel);
+        frame.add(s);
         frame.setVisible(true);
 
     }
 
 }
-

@@ -1,20 +1,33 @@
 package gui;
 
 import food.Food;
+import food.Store;
 import food.User;
 
+import java.awt.*;
 import java.awt.event.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class DetailPage{
     JButton foodLikedImg;
-    public DetailPage(Food food, User user){
+    public DetailPage(Store store, Food food){
         // JFrame에 기본 포멧을 New 해주시고, 해당 frame에 추가적으로 작성해서 덧붙이시면 됩니다.
-        JFrame frame = new BasicFormat();
+        JFrame frame = new BasicFormat(store);
         // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요
         frame.setTitle("상세 정보 창");
+        User user = store.userMgr.getList().get(0);
+
+        // 마우스 커서
+        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
+
+        // 폰트 설정
+        Font font = new Font("Binggrae",Font.PLAIN, 14);
 
         // 하트 실시간 반영을 위한 리스트 재구성
         user.getlikedSaveFile().clear();
@@ -24,23 +37,24 @@ public class DetailPage{
         // 이후 정상적으로 연결 할 경우 음식을 클릭 했을때 해당 음식을 매개변수로 전달해줘야 합니다.
         // ex) DetailPage(answerFood, user);
         String name = food.getName();
-        String recipe = food.getRecipe();
         String ingr = food.getIngr();
 
         // text
         JLabel foodName = new JLabel(name);
+        foodName.setFont(font);
 
-        //JTextArea foodRecipe = new JTextArea(recipe);
         JTextArea foodRecipe = new JTextArea();
         for (String str: food.getRecipes()){
             foodRecipe.append(str+"\n");
         }
+        foodRecipe.setFont(font);
         foodRecipe.setEnabled(false); // 내용 수정 불가
         foodRecipe.setLineWrap(true); // 자동 줄바꿈
 
         JTextArea foodIngr = new JTextArea("재료\n" + ingr);
         foodIngr.setEnabled(false);
         foodIngr.setLineWrap(true);
+        foodIngr.setFont(font);
 
         // image
         ImageIcon foodImgIcon = new ImageIcon("./image/"+name+".png");
@@ -96,9 +110,22 @@ public class DetailPage{
                         ex.printStackTrace();
                     }
                 }
-                new DetailPage(food,user);
+                new DetailPage(store, food);
                 frame.dispose();
 
+            }
+        });
+
+        foodLikedImg.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 

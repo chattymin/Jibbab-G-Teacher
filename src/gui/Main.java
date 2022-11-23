@@ -13,14 +13,11 @@ import javax.swing.JPanel;
 //GUI 구현을 위한 JFrame 생성 부분
 public class Main {
 	public Main(Store store) {
-		new MainPage(store);
-		
+        new DetailPage(store, store.foodMgr.getList().get(0));
+        //new MainPage(store);
 	}
 
-	//좋아요 목록
-	public Main(User user, String kwd){
-		new LikedList(user,kwd);
-	}
+    public static void main(String[] args) {}
 
 	static void createAndShowGUI() {
         JFrame frame = new JFrame("FoodStoreDemo"); // GUI 창 제목 설정

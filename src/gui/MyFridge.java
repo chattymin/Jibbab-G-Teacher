@@ -23,7 +23,7 @@ public class MyFridge {
     Image background = new ImageIcon("./image/emptyFridge.png").getImage();
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
-    public MyFridge(Store store) {       
+    public MyFridge(Store store) {
         ArrayList<String> myFridge = user.getMyFridge();
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
