@@ -6,23 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Food.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/Store.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/FoodStoreDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/FoodStoreDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manageable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manageable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/mgr/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/food/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/FoodStoreDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/LikedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mgr/Manageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mgr/Manageable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mgr/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mgr/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Tips1.JPEG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/Tips2.JPEG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/suyeon" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -85,10 +76,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="애플리케이션.LoadingPage">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yun10\Desktop\GIT\ObjectOrientedTeamG\image\Tips" />
+    </key>
+  </component>
+  <component name="RunManager" selected="애플리케이션.Store">
     <configuration name="LoadingPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.LoadingPage" />
       <module name="ObjectOrientedTeamG" />
@@ -143,6 +140,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.Store" />
         <item itemvalue="애플리케이션.LoadingPage" />
       </list>
     </recent_temporary>
@@ -173,6 +171,7 @@
       <workItem from="1668933969081" duration="472000" />
       <workItem from="1668949573770" duration="2556000" />
       <workItem from="1668952143124" duration="340000" />
+      <workItem from="1669218683528" duration="6234000" />
     </task>
     <servers />
   </component>
