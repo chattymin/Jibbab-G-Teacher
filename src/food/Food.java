@@ -16,7 +16,7 @@ public class Food implements Manageable, Comparable<Food> {
 
 	// 중식 메인 면 짜장 0 면요리 짜장면 4
 	@Override
-	public void read(Scanner scan) {
+	public void read(Scanner scan,Store store) {
 		String temp = null;
 		country = scan.next();
 		type = scan.next();

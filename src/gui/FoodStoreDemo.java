@@ -1,3 +1,4 @@
+/*
 package gui;
 
 import java.awt.Color;
@@ -33,7 +34,7 @@ public class FoodStoreDemo extends JPanel {
 			public Food create() {
 				return new Food();
 			}
-		});
+		},);
 		
 		// table의 맨 위에 위치하는 분류 항목들
         // tablemodel를 통해 table 데이터의 큰 틀을 짜준다
@@ -49,3 +50,4 @@ public class FoodStoreDemo extends JPanel {
         add(scrollPane);
     }
 }
+*/
