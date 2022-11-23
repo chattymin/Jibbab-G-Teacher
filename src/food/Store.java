@@ -3,7 +3,7 @@ package food;
 import java.io.IOException;
 import java.util.Scanner;
 
-import gui.MainPage;
+import gui.LikedList;
 import mgr.Factory;
 import mgr.Manager;
 
@@ -20,7 +20,7 @@ public class Store extends Manager {
 			public Food create() {
 				return new Food();
 			}
-		});
+		},this);
 
 		// 사용자 매니저
 		userMgr.readAll("./txt/User.txt", new Factory<User>() {
@@ -28,7 +28,7 @@ public class Store extends Manager {
 			public User create() {
 				return new User();
 				}
-		});
+		},this);
 		/*
 		// 음식 목록 정렬 후 출력
 		System.out.println("==음식 목록==");
@@ -97,8 +97,9 @@ public class Store extends Manager {
 
 		// gui의 메인 클래스를 호출하는 것이고, food객체, user객체 입니다.
 		// 박동민의 page 형식에 맞는 호출 값이기 때문에 다른 분들은 다른 형식의 호출을 진행하셔도 됩니다.
-		new MainPage(this);
-
+		//new MainPage(this);
+		//new SearchResult(this);
+		new LikedList(this);
 
 	}
 

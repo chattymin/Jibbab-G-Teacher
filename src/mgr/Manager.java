@@ -1,5 +1,7 @@
 package mgr;
 
+import food.Store;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -21,13 +23,13 @@ public class Manager<T extends Manageable> {
 		return filein;
 	}
 
-	public void readAll(String filename, Factory<T> fac) {
+	public void readAll(String filename, Factory<T> fac, Store store) {
 		Scanner filein = openFile(filename);
 		T m = null;
 
 		while (filein.hasNext()) {
 			m = fac.create();
-			m.read(filein);
+			m.read(filein,store);
 			mList.add(m);
 		}
 		filein.close();
@@ -77,4 +79,5 @@ public class Manager<T extends Manageable> {
 	public ArrayList<T> getList() {return mList;}
 	
 	public ArrayList<T> getsearchResult() {return searchResult;}
+
 }
