@@ -10,12 +10,10 @@ import java.awt.GridLayout;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.awt.FlowLayout;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Font;
 
-import food.Food;
 import food.Store;
 import food.User;
 
@@ -25,18 +23,20 @@ public class MyFridge {
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
     public MyFridge(Store store) {
-        /*
+        User user = store.userMgr.getList().get(0);
+        // Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         ArrayList<String> myFridge = user.getMyFridge();
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
-        // System.out.println(HMyIngre.get("짜장"));
-        JFrame frame = new BasicFormat(store);  
+
+        // JFrame frame = new BasicFormat(store);  
+        JFrame frame = new BasicFormat(store);
         frame.setTitle("내 냉장고");
 
         JPanel buttonPanel = new ImagePanel();
-        // JScrollPane scrollPane = new JScrollPane();
-
-        buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT, 30, 40));
+        int rows = (myFridge.size() / 4) + 1;
+        GridLayout layout = new GridLayout(rows , 4, 30, 40);
+        buttonPanel.setLayout(layout);
         buttonPanel.setBounds(0, 0, 390, 510);
 
         JButton btns[] = new JButton[myFridge.size()];
@@ -46,18 +46,21 @@ public class MyFridge {
 			buttonPanel.add(btns[i]);
 		}
 
-        frame.setVisible(true);
-        // scrollPane.setViewportView(buttonPanel);
-        frame.add(buttonPanel);
 
-         */
+        JScrollPane scrollPane = new JScrollPane(buttonPanel, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(30);
+        scrollPane.setBounds(0, 0, 390, 510);
+        frame.add(scrollPane);
+
+        frame.setVisible(true);
+
     }
 
     // 재료의 키워드와 이미지를 해시로 저장
     public void setHash(HashMap hash, User user) {
         // 김치 양파 파 버섯 감자 참치 스팸
         ArrayList<String> ingredients = user.getIngredients();
-
+        
         for(String ingre : ingredients) {
             ImageIcon tmpIcon = new ImageIcon("./image/ingredients/" + ingre + ".png");
             Image tmpImg = tmpIcon.getImage();
