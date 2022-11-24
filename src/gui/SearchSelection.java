@@ -325,6 +325,7 @@ public class SearchSelection {
         			String kwd = kwdTextField.getText();
         			store.foodMgr.kwdSearch(kwd);
         			new SearchResult(store);
+        			frame.dispose();
     			}
         	}
 		});
@@ -333,6 +334,7 @@ public class SearchSelection {
         			store.foodMgr.getsearchResult().clear();
         			store.userMgr.getList().get(0).fridgeSearch(store.foodMgr);
         			new SearchResult(store);
+        			frame.dispose();
         	}
 		});
 		searchKor.addActionListener(new ActionListener() {
@@ -340,6 +342,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("한식");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchChi.addActionListener(new ActionListener() {
@@ -347,6 +350,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("중식");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchJap.addActionListener(new ActionListener() {
@@ -354,6 +358,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("일식");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchWest.addActionListener(new ActionListener() {
@@ -361,6 +366,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("양식");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchBeef.addActionListener(new ActionListener() {
@@ -368,6 +374,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("소");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchPork.addActionListener(new ActionListener() {
@@ -375,6 +382,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("돼지");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchChicken.addActionListener(new ActionListener() {
@@ -382,6 +390,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("닭");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchMainDish.addActionListener(new ActionListener() {
@@ -389,6 +398,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("메인");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchSideDish.addActionListener(new ActionListener() {
@@ -396,6 +406,7 @@ public class SearchSelection {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("사이드");
         		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 	}
