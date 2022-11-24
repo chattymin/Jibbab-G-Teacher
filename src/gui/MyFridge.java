@@ -47,7 +47,7 @@ public class MyFridge {
 		}
 
 
-        JScrollPane scrollPane = new JScrollPane(buttonPanel, JScrollPane.VERTICAL_SCROLLBAR_NEVER, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        JScrollPane scrollPane = new JScrollPane(buttonPanel);
         scrollPane.getVerticalScrollBar().setUnitIncrement(30);
         scrollPane.setBounds(0, 0, 390, 510);
         frame.add(scrollPane);
