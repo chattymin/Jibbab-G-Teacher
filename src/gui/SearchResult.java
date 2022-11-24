@@ -10,11 +10,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class SearchResult {
 
     public SearchResult(Store store){
-
         User user = store.userMgr.getList().get(0);
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
@@ -92,6 +93,10 @@ public class SearchResult {
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
 
+        // 마우스 커서
+        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
+
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");
         JButton home =  new JButton("home",homeImg);
@@ -105,6 +110,18 @@ public class SearchResult {
                 frame.dispose();
             }
         });
+        home.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
+            }
+        });
 
         // searchButton
         ImageIcon searchImg = new ImageIcon("./image/search.png");
@@ -115,8 +132,20 @@ public class SearchResult {
         search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new SearchPage;
+                new SearchSelection(store);
                 frame.dispose();
+            }
+        });
+        search.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 
@@ -129,8 +158,20 @@ public class SearchResult {
         fridge.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new FridgePage();
+                new MyFridge(store);
                 frame.dispose();
+            }
+        });
+        fridge.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 
@@ -144,8 +185,20 @@ public class SearchResult {
         like.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new LikePage();
+                new LikedList(store);
                 frame.dispose();
+            }
+        });
+        like.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 

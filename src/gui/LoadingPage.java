@@ -10,7 +10,7 @@ import javax.swing.*;
 public class LoadingPage {
 
     private int alpha = 1;
-    private int increment = 10;
+    private int increment = 9;
     JLabel label = new JLabel("Team G",SwingConstants.CENTER);
     Font font = new Font("Binggrae-Bold",Font.BOLD, 100);
 
@@ -26,7 +26,7 @@ public class LoadingPage {
 
     public void makeUI() {
         JFrame frame = new JFrame();
-        new Timer(35, new ActionListener() {
+        new Timer(40, new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
                 alpha += increment;
@@ -46,6 +46,7 @@ public class LoadingPage {
 
         label.setFont(font);
         frame.add(label);
+        frame.setResizable(false); // 창 크기 변경 가능 여부(false)
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400,640); // 가로, 세로 사이즈
         frame.setLocationRelativeTo(null);

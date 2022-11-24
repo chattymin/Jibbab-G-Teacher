@@ -147,7 +147,7 @@ public class BasicFormat extends JFrame{
         setTitle("기본 포멧"); // 이름
         setLayout(null);
         setSize(400,640); // 가로, 세로 사이즈
-        setResizable(true); // 창 크기 변경 가능 여부(false)
+        setResizable(false); // 창 크기 변경 가능 여부(false)
         setLocationRelativeTo(null); // 창이 가운데 생성되도록
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 프로그램 정상 종료
     }

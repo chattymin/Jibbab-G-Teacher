@@ -8,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class LikedList {
 
@@ -82,6 +84,9 @@ public class LikedList {
         buttonPanel.setVisible(true);
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
+// 마우스 커서
+        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");
@@ -96,6 +101,18 @@ public class LikedList {
                 frame.dispose();
             }
         });
+        home.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
+            }
+        });
 
         // searchButton
         ImageIcon searchImg = new ImageIcon("./image/search.png");
@@ -106,8 +123,20 @@ public class LikedList {
         search.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new SearchPage;
+                new SearchSelection(store);
                 frame.dispose();
+            }
+        });
+        search.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 
@@ -120,8 +149,20 @@ public class LikedList {
         fridge.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new FridgePage();
+                new MyFridge(store);
                 frame.dispose();
+            }
+        });
+        fridge.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 
@@ -135,8 +176,20 @@ public class LikedList {
         like.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //new LikePage();
+                new LikedList(store);
                 frame.dispose();
+            }
+        });
+        like.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                frame.setCursor(clickCursor);
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                frame.setCursor(normalCursor);
             }
         });
 
@@ -146,13 +199,12 @@ public class LikedList {
         buttonPanel.add(fridge);
         buttonPanel.add(like);
 
-        JScrollPane s = new JScrollPane(spanel);
-        s.setBounds(0,0,400,500);
-        frame.add(s);
+        JScrollPane scroll = new JScrollPane(spanel);
+        scroll.setBounds(0,0,400,500);
+        frame.add(scroll);
         frame.add(buttonPanel);
 
         frame.setVisible(true);
-
 
     }
 

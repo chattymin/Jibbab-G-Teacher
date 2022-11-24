@@ -1,9 +1,10 @@
 package gui;
 
-import java.awt.Font;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -20,7 +21,10 @@ public class SearchSelection {
         JFrame frame = new BasicFormat(store);
         frame.setTitle("검색 종류 선택");
         Font font = new Font("Binggrae-Bold", Font.BOLD, 14);
-        
+		// 마우스 커서
+		Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+		Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
+
 		JPanel searchMenu = new JPanel();
 		searchMenu.setVisible(true);
 		searchMenu.setLayout(null);
@@ -31,6 +35,18 @@ public class SearchSelection {
 		JButton kwdSearch = new JButton("통합검색");
 		kwdSearch.setBounds(250, 30, 95, 25);
 		kwdSearch.setFont(font);
+		kwdSearch.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		
 		ImageIcon icon = new ImageIcon("./image/searchbtn/korean.png");
 		Image img = icon.getImage();
@@ -38,6 +54,18 @@ public class SearchSelection {
 		JButton searchKor = new JButton(new ImageIcon(korfood));
 		searchKor.setBounds(45, 80, 60, 60);
 		searchKor.setContentAreaFilled(false);
+		searchKor.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchKor.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel korLabel = new JLabel("한식");
 		korLabel.setBounds(45, 145, 60, 15);
@@ -50,6 +78,18 @@ public class SearchSelection {
 		JButton searchChi = new JButton(new ImageIcon(chifood));
 		searchChi.setBounds(125, 80, 60, 60);
 		searchChi.setContentAreaFilled(false);
+		searchChi.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchChi.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel chiLabel = new JLabel("중식");
 		chiLabel.setBounds(125, 145, 60, 15);
@@ -62,6 +102,18 @@ public class SearchSelection {
 		JButton searchJap = new JButton(new ImageIcon(japfood));
 		searchJap.setBounds(205, 80, 60, 60);
 		searchJap.setContentAreaFilled(false);
+		searchJap.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchJap.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel japLabel = new JLabel("일식");
 		japLabel.setBounds(205, 145, 60, 15);
@@ -74,6 +126,18 @@ public class SearchSelection {
 		JButton searchWest = new JButton(new ImageIcon(westfood));
 		searchWest.setBounds(285, 80, 60, 60);
 		searchWest.setContentAreaFilled(false);
+		searchWest.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchWest.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel westLabel = new JLabel("양식");
 		westLabel.setBounds(285, 145, 60, 15);
@@ -86,6 +150,18 @@ public class SearchSelection {
 		JButton searchBeef = new JButton(new ImageIcon(beeffood));
 		searchBeef.setBounds(45, 170, 80, 80);
 		searchBeef.setContentAreaFilled(false);
+		searchBeef.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchBeef.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel beefLabel = new JLabel("소고기");
 		beefLabel.setBounds(45, 255, 80, 15);
@@ -98,6 +174,18 @@ public class SearchSelection {
 		JButton searchPork = new JButton(new ImageIcon(porkfood));
 		searchPork.setBounds(155, 170, 80, 80);
 		searchPork.setContentAreaFilled(false);
+		searchPork.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchPork.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel porkLabel = new JLabel("돼지고기");
 		porkLabel.setBounds(155, 255, 80, 15);
@@ -110,6 +198,18 @@ public class SearchSelection {
 		JButton searchChicken = new JButton(new ImageIcon(chickenfood));
 		searchChicken.setBounds(265, 170, 80, 80);
 		searchChicken.setContentAreaFilled(false);
+		searchChicken.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchChicken.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel chickenLabel = new JLabel("닭고기");
 		chickenLabel.setBounds(265, 255, 80, 15);
@@ -122,6 +222,18 @@ public class SearchSelection {
 		JButton searchMainDish = new JButton(new ImageIcon(maindish));
 		searchMainDish.setBounds(45, 280, 140, 80);
 		searchMainDish.setContentAreaFilled(false);
+		searchMainDish.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchMainDish.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel mainDishLabel = new JLabel("메인요리");
 		mainDishLabel.setBounds(45, 365, 140, 15);
@@ -134,6 +246,18 @@ public class SearchSelection {
 		JButton searchSideDish = new JButton(new ImageIcon(sidedish));
 		searchSideDish.setBounds(205, 280, 140, 80);
 		searchSideDish.setContentAreaFilled(false);
+		searchSideDish.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchSideDish.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel sideDishLabel = new JLabel("사이드요리");
 		sideDishLabel.setBounds(205, 365, 140, 15);
@@ -146,6 +270,18 @@ public class SearchSelection {
 		JButton searchIngr = new JButton(new ImageIcon(ingr));
 		searchIngr.setBounds(45, 390, 300, 80);
 		searchIngr.setContentAreaFilled(false);
+		searchIngr.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+				frame.setCursor(clickCursor);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+				frame.setCursor(normalCursor);
+			}
+		});
 		//searchIngr.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel ingrLabel = new JLabel("냉장고 재료로 검색");
 		ingrLabel.setBounds(45, 480, 300, 15);
