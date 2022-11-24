@@ -54,24 +54,9 @@ public class MainPage extends JFrame {
         MainButtonPanel.setLayout(null);
         MainButtonPanel.setBounds(5, 420, 390, 90);
 
-        //이미지를 넣어보고 싶었는데 사이즈이슈로 그냥 글씨나오는 패널로 할게요...
-        JButton LikedListModify = new JButton("찜 수정");
-        LikedListModify.setBounds(0, 5, 190, 80);
-        LikedListModify.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
-            }
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
-            }
-        });
 
         JButton FridgeListModify = new JButton("보유재료수정");
-        FridgeListModify.setBounds(200, 5, 190, 80);
+        FridgeListModify.setBounds(75, 5, 250, 80);
         FridgeListModify.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -85,25 +70,10 @@ public class MainPage extends JFrame {
             }
         });
 
-        MainButtonPanel.add(LikedListModify);
+
         MainButtonPanel.add(FridgeListModify);
 
         frame.add(MainButtonPanel);
-         /*
-        ImageIcon fridgeEditImg = new ImageIcon("./image/001.jpg");
-        JLabel Eidt1 = new JLabel(fridgeEditImg);
-        Eidt1.setBounds(200, 5, 190, 80);
-        /*JButton fridgeEdit =  new JButton(fridgeEditImg);
-        fridgeEdit.setBorderPainted(false); // 버튼 테두리 설정해제
-        fridgeEdit.setContentAreaFilled(false);
-        fridgeEdit.setBounds(200, 5, 80, 80);
-        fridgeEdit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //new MyFridge(store);
-                dispose();
-            }
-        });*/
 
         // 최종 설정
         frame.setVisible(true);
