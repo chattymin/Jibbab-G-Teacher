@@ -14,10 +14,14 @@
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/LikedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/LikedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LikedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/LikedList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/LikedSaveFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedSaveFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature/cho" />
-                    <option name="lastUsedInstant" value="1669211249" />
+                    <option name="lastUsedInstant" value="1669267479" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -83,16 +87,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/hyeeun/Desktop/d/ObjectOrientedTeamG",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hyeeun/Desktop/d/ObjectOrientedTeamG&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yun10\Desktop\GIT\ObjectOrientedTeamG\image\Tips" />
