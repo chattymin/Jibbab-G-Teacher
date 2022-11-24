@@ -34,7 +34,7 @@ public class SearchResult {
         GridLayout layout = new GridLayout(0,1);
         spanel.setLayout(layout);
 
-        for (Food f : store.foodMgr.getList()){
+        for (Food f : store.foodMgr.getsearchResult()){
             String kwd = "메인";
             if (f.matches(kwd)){
                 JPanel panel = new JPanel(new BorderLayout());
