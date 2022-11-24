@@ -108,16 +108,11 @@ public class User implements Manageable {
 		for (String fridge: myFridge) {
 			for (Food f : manager.getList()) {
 				if (f.matches(fridge))
-					fridgeSearchList.add(f);
+					manager.getsearchResult().add(f);
 			}
 		}
-
-		System.out.format("\n==보유한 재료가 포함된 음식 목록==\n");
-		for (Food f: fridgeSearchList) {f.print();}
-
-		// 사용 종료된 HashSet비우기 => 보유 재료 변경됐을때 이전 값 남아있는 현상 방지
-		fridgeSearchList.clear();
 	}
+
 	public void readLikedList(Store store){
 		Food food = null;
 		for (String s:likedSaveFile){
