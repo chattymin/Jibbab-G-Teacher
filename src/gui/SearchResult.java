@@ -124,6 +124,8 @@ public class SearchResult {
                                 }
                                 fw.write(name);
                                 fw.close();
+                                foodLikedImg.setIcon(fullHeartIcon);
+                                
                             } catch (IOException ex) {
                                 ex.printStackTrace();
                             }
@@ -136,13 +138,11 @@ public class SearchResult {
                                     fw.write(str + " ");
                                 }
                                 fw.close();
+                                foodLikedImg.setIcon(emptyHeartIcon);
                             } catch (IOException ex) {
                                 ex.printStackTrace();
                             }
                         }
-                        new LikedList(store);
-                        frame.dispose();
-
                     }
                 });
 
