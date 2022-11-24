@@ -12,10 +12,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class SearchResult {
 
     public SearchResult(Store store){
+        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
@@ -46,12 +50,32 @@ public class SearchResult {
                 String ingr = f.getIngr();
 
                 ImageIcon icon = new ImageIcon("./image/"+name+".png");
-                JLabel foodImg = new JLabel(icon);
+                JButton foodImg = new JButton(icon);
                 panel1.add(foodImg);
                 panel12.add("West",panel1);
+                foodImg.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseEntered(MouseEvent e) {
+                        //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                        frame.setCursor(clickCursor);
+                    }
+                    @Override
+                    public void mouseExited(MouseEvent e) {
+                        ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                        frame.setCursor(normalCursor);
+                    }
+                });
+                Food food = user.getFood(name,store);
+                foodImg.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        new DetailPage(store,food);
+                        frame.dispose();
+                    }
+                });
 
                 JLabel foodName = new JLabel(name);
-                JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료"+ingr);
+                JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료 : "+ingr);
                 foodInfo.setEnabled(false);
                 foodInfo.setLineWrap(true);
                 foodName.setFont(font);
@@ -62,10 +86,11 @@ public class SearchResult {
                 panel2.add(foodInfo);
                 panel12.add("East",panel2);
 
+
                 ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
                 ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
                 JButton foodLikedImg;
-                if (user.getMyFoodList().contains(name))
+                if (user.getlikedSaveFile().contains(name))
                     foodLikedImg = new JButton(fullHeartIcon);
                 else
                     foodLikedImg = new JButton(emptyHeartIcon);
@@ -75,6 +100,52 @@ public class SearchResult {
                 foodName.setBounds(180,10,160,40);
                 foodInfo.setBounds(180,60,210,100);
                 panel3.add(foodLikedImg);
+                foodLikedImg.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mouseEntered(MouseEvent e) {
+                        //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                        frame.setCursor(clickCursor);
+                    }
+                    @Override
+                    public void mouseExited(MouseEvent e) {
+                        ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                        frame.setCursor(normalCursor);
+                    }
+                });
+                foodLikedImg.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // file writer를 통해 찜 목록에서 삭제 or 추가 기능 구현 필요
+                        if (!user.getlikedSaveFile().contains(name)){ // 찜 안한 음식 찜하기
+                            try {
+                                FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                                for (String str: user.getlikedSaveFile()){
+                                    fw.write(str + " ");
+                                }
+                                fw.write(name);
+                                fw.close();
+                            } catch (IOException ex) {
+                                ex.printStackTrace();
+                            }
+                        }else { // 찜했던 음식 목록에서 삭제
+                            try {
+                                FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                                for (String str: user.getlikedSaveFile()){
+                                    if (str.contentEquals(name))
+                                        continue;
+                                    fw.write(str + " ");
+                                }
+                                fw.close();
+                            } catch (IOException ex) {
+                                ex.printStackTrace();
+                            }
+                        }
+                        new LikedList(store);
+                        frame.dispose();
+
+                    }
+                });
+
 
 
                 panel.add("West",panel12);
@@ -93,9 +164,7 @@ public class SearchResult {
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
 
-        // 마우스 커서
-        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
-        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
+
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");
@@ -210,6 +279,7 @@ public class SearchResult {
 
         JScrollPane scroll = new JScrollPane(spanel);
         scroll.setBounds(0,0,400,500);
+        scroll.getVerticalScrollBar().setUnitIncrement(30);
         frame.add(scroll);
         frame.add(buttonPanel);
 

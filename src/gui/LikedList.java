@@ -16,6 +16,8 @@ import java.io.IOException;
 public class LikedList {
 
     public LikedList(Store store) {
+        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
@@ -48,12 +50,32 @@ public class LikedList {
             String ingr = f.getIngr();
 
             ImageIcon icon = new ImageIcon("./image/"+name+".png");
-            JLabel foodImg = new JLabel(icon);
+            JButton foodImg = new JButton(icon);
             panel1.add(foodImg);
             panel12.add("West",panel1);
+            foodImg.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                    frame.setCursor(clickCursor);
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                    frame.setCursor(normalCursor);
+                }
+            });
+            Food food = user.getFood(name,store);
+            foodImg.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new DetailPage(store,food);
+                    frame.dispose();
+                }
+            });
 
             JLabel foodName = new JLabel(name);
-            JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료"+ingr);
+            JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료 : "+ingr);
             foodInfo.setEnabled(false);
             foodInfo.setLineWrap(true);
             foodName.setFont(font);
@@ -63,6 +85,7 @@ public class LikedList {
             panel2.add(foodName);
             panel2.add(foodInfo);
             panel12.add("East",panel2);
+
 
             ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
             ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
@@ -77,7 +100,18 @@ public class LikedList {
             foodName.setBounds(180,10,160,40);
             foodInfo.setBounds(180,60,210,100);
             panel3.add(foodLikedImg);
-
+            foodLikedImg.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                    frame.setCursor(clickCursor);
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                    frame.setCursor(normalCursor);
+                }
+            });
             foodLikedImg.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -113,6 +147,7 @@ public class LikedList {
             });
 
 
+
             panel.add("West",panel12);
             panel.add("East",panel3);
 
@@ -124,8 +159,7 @@ public class LikedList {
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
 // 마우스 커서
-        Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
-        Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
+
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");

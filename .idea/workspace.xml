@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/src/food/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MyFridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MyFridge.java" afterDir="false" />
-    </list>
+    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,8 +42,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
+                    <option name="branchName" value="feature/hyen" />
+                    <option name="lastUsedInstant" value="1669269228" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="feature/cho" />
-                    <option name="lastUsedInstant" value="1669211249" />
+                    <option name="lastUsedInstant" value="1669269173" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -87,7 +88,7 @@
       <recent name="C:\Users\yun10\Desktop\GIT\ObjectOrientedTeamG\image\Tips" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Store">
+  <component name="RunManager" selected="애플리케이션.LoadingPage">
     <configuration name="LoadingPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.LoadingPage" />
       <module name="ObjectOrientedTeamG" />
@@ -142,7 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Store" />
+        <item itemvalue="애플리케이션.LoadingPage" />
       </list>
     </recent_temporary>
   </component>
