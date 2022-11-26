@@ -49,7 +49,7 @@ public class SearchResult {
                 String country = f.getCountry();
                 String ingr = f.getIngr();
 
-                ImageIcon icon = new ImageIcon("./image/"+name+".png");
+                ImageIcon icon = new ImageIcon("./image/Food/"+name+".png");
                 JButton foodImg = new JButton(icon);
                 panel1.add(foodImg);
                 panel12.add("West",panel1);

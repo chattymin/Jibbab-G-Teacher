@@ -57,7 +57,7 @@ public class DetailPage{
         foodIngr.setFont(font);
 
         // image
-        ImageIcon foodImgIcon = new ImageIcon("./image/"+name+".png");
+        ImageIcon foodImgIcon = new ImageIcon("./image/Food/"+name+".png");
         JLabel foodImg = new JLabel(foodImgIcon);
 
         // 좋아요 여부에 따른 하트 이미지 선정
