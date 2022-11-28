@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경" />
+    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
+      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/food/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/food/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/food/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/LikedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LikedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/MyFridge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/MyFridge.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

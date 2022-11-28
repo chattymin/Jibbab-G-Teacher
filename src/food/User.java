@@ -26,7 +26,7 @@ public class User implements Manageable {
 		readtxt("./txt/LikedSaveFile.txt", likedSaveFile);
 		readtxt("./txt/MyFridge.txt", myFridge);
 		readtxt("./txt/Ingredients.txt", ingredients);
-		readLikedList(store);
+		readLikedList(store,likedList);
 	}
 
 	// 보유 재료, 선호 음식 파일 입력 메소드
@@ -113,7 +113,7 @@ public class User implements Manageable {
 		}
 	}
 
-	public void readLikedList(Store store){
+	public void readLikedList(Store store,ArrayList<Food>likedList){
 		Food food = null;
 		for (String s:likedSaveFile){
 			for (Food f: store.foodMgr.getList()){
