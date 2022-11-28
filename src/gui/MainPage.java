@@ -69,6 +69,14 @@ public class MainPage extends JFrame {
                 frame.setCursor(normalCursor);
             }
         });
+        
+        FridgeListModify.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                new SetMyFridge(store);
+                frame.dispose();
+            }
+        });
 
 
         MainButtonPanel.add(FridgeListModify);
