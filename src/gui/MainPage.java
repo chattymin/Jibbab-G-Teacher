@@ -14,7 +14,7 @@ public class MainPage extends JFrame {
     public MainPage(Store store) {
         JFrame frame = new BasicFormat(store);
         frame.setTitle("메인화면");
-        Font font = new Font("Binggrae-Bold",Font.BOLD, 10);
+        Font font = new Font("Binggrae",Font.PLAIN, 25);
 
         //마우스 커서
         Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
@@ -49,13 +49,14 @@ public class MainPage extends JFrame {
 
         frame.add(TipsPanel);
 
-       // 리스트 설정 패널
+        // 리스트 설정 패널
         JPanel MainButtonPanel = new JPanel();
         MainButtonPanel.setLayout(null);
         MainButtonPanel.setBounds(5, 420, 390, 90);
 
 
         JButton FridgeListModify = new JButton("보유재료수정");
+        FridgeListModify.setFont(font);
         FridgeListModify.setBounds(75, 5, 250, 80);
         FridgeListModify.addMouseListener(new MouseAdapter() {
             @Override
@@ -67,6 +68,14 @@ public class MainPage extends JFrame {
             public void mouseExited(MouseEvent e) {
                 ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
                 frame.setCursor(normalCursor);
+            }
+        });
+
+        FridgeListModify.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                new SetMyFridge(store);
+                frame.dispose();
             }
         });
 

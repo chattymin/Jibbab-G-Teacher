@@ -9,6 +9,7 @@ import gui.DetailPage;
 import gui.LikedList;
 import gui.MainPage;
 import gui.MyFridge;
+import gui.SetMyFridge;
 import mgr.Factory;
 import mgr.Manager;
 
@@ -101,12 +102,12 @@ public class Store extends Manager {
 
 		// gui의 메인 클래스를 호출하는 것이고, food객체, user객체 입니다.
 		// 박동민의 page 형식에 맞는 호출 값이기 때문에 다른 분들은 다른 형식의 호출을 진행하셔도 됩니다.
-		//new MainPage(this);
+		new MainPage(this);
 		//new SearchResult(this);
 		// new LikedList(this);
-		new MyFridge(this);
+		//new MyFridge(this);
 		//new DetailPage(this,foodMgr.getList().get(0));
-
+		// new SetMyFridge(this);
 	}
 
 	// 검색이 두종류로 나뉨에 따라 searchMenu생성

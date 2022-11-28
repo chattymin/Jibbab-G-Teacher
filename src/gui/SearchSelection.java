@@ -30,6 +30,7 @@ public class SearchSelection {
 		searchMenu.setLayout(null);
 		searchMenu.setBounds(0, 0, 400, 500);
 		
+		// 통합검색 부분
 		JTextField kwdTextField = new JTextField("", 20);
 		kwdTextField.setBounds(45, 30, 200, 25);
 		JButton kwdSearch = new JButton("통합검색");
@@ -48,6 +49,7 @@ public class SearchSelection {
 			}
 		});
 		
+		// 카테고리별, 재료별 검색 부분
 		ImageIcon icon = new ImageIcon("./image/searchbtn/korean.png");
 		Image img = icon.getImage();
 		Image korfood = img.getScaledInstance(60, 60, Image.SCALE_DEFAULT);
@@ -66,7 +68,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchKor.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel korLabel = new JLabel("한식");
 		korLabel.setBounds(45, 145, 60, 15);
 		korLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -90,7 +91,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchChi.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel chiLabel = new JLabel("중식");
 		chiLabel.setBounds(125, 145, 60, 15);
 		chiLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -114,7 +114,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchJap.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel japLabel = new JLabel("일식");
 		japLabel.setBounds(205, 145, 60, 15);
 		japLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -138,7 +137,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchWest.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel westLabel = new JLabel("양식");
 		westLabel.setBounds(285, 145, 60, 15);
 		westLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -162,7 +160,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchBeef.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel beefLabel = new JLabel("소고기");
 		beefLabel.setBounds(45, 255, 80, 15);
 		beefLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -186,7 +183,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchPork.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel porkLabel = new JLabel("돼지고기");
 		porkLabel.setBounds(155, 255, 80, 15);
 		porkLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -210,7 +206,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchChicken.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel chickenLabel = new JLabel("닭고기");
 		chickenLabel.setBounds(265, 255, 80, 15);
 		chickenLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -234,7 +229,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchMainDish.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel mainDishLabel = new JLabel("메인요리");
 		mainDishLabel.setBounds(45, 365, 140, 15);
 		mainDishLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -258,7 +252,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchSideDish.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel sideDishLabel = new JLabel("사이드요리");
 		sideDishLabel.setBounds(205, 365, 140, 15);
 		sideDishLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -282,7 +275,6 @@ public class SearchSelection {
 				frame.setCursor(normalCursor);
 			}
 		});
-		//searchIngr.setBorder(new LineBorder(Color.black, 2, true));
 		JLabel ingrLabel = new JLabel("냉장고 재료로 검색");
 		ingrLabel.setBounds(45, 480, 300, 15);
 		ingrLabel.setHorizontalAlignment(JLabel.CENTER);
@@ -324,85 +316,100 @@ public class SearchSelection {
 		
 		frame.setVisible(true);
 		
+		// 이벤트 부분, 냉장고 재료 검색 메소드는 user의 fridgeSearch, 나머지는 mgr의 kwdSearch 이용
+		// 검색 결과는 foodMgr의 searchResult에서 불러오기
 		kwdSearch.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		if (e.getActionCommand().equals("통합검색")) {
         			store.foodMgr.getsearchResult().clear();
         			String kwd = kwdTextField.getText();
         			store.foodMgr.kwdSearch(kwd);
-        			//new SearchResult(store);
+        			new SearchResult(store);
+        			frame.dispose();
     			}
         	}
 		});
-        	
-		// 검색 결과 fridgesearchlist 불러오기
 		searchIngr.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		if (e.getActionCommand().equals("냉장고 재료로 검색")) {
-        			store.userMgr.getList().get(0).getFridgeSearchList().clear();	
+        			store.userMgr.getList().get(0).getMyFridge().clear();
+        			store.userMgr.getList().get(0).readtxt("./txt/myFridge.txt",
+        					store.userMgr.getList().get(0).getMyFridge());
+        			store.foodMgr.getsearchResult().clear();
         			store.userMgr.getList().get(0).fridgeSearch(store.foodMgr);
-        			//new SearchResult(store);
-            	}
+        			new SearchResult(store);
+        			frame.dispose();
         	}
 		});
-		
-		// 검색 결과 searchresult(배열) 불러오기
 		searchKor.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("한식");
-        		//new SearchResult(store);
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchChi.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("중식");
-        		//new SearchResult(store);
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchJap.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("일식");
-        		//new SearchResult(store);
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchWest.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("양식");
-        		//new SearchResult(store);
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchBeef.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("소");
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchPork.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("돼지");
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchChicken.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("닭");
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchMainDish.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("메인");
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 		searchSideDish.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("사이드");
+        		new SearchResult(store);
+        		frame.dispose();
             	}
         	});
 	}
