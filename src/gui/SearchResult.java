@@ -35,124 +35,122 @@ public class SearchResult {
         spanel.setLayout(layout);
 
         for (Food f : store.foodMgr.getsearchResult()){
-            String kwd = "메인";
-            if (f.matches(kwd)){
-                JPanel panel = new JPanel(new BorderLayout());
-                panel.setPreferredSize(new Dimension(370,280));
-                JPanel panel1 = new JPanel();
-                JPanel panel2 = new JPanel();
-                JPanel panel3 = new JPanel();
-                JPanel panel12 = new JPanel();
+            JPanel panel = new JPanel(new BorderLayout());
+            panel.setPreferredSize(new Dimension(370,280));
+            JPanel panel1 = new JPanel();
+            JPanel panel2 = new JPanel();
+            JPanel panel3 = new JPanel();
+            JPanel panel12 = new JPanel();
 
-                String name = f.getName();
-                String type = f.getType();
-                String country = f.getCountry();
-                String ingr = f.getIngr();
+            String name = f.getName();
+            String type = f.getType();
+            String country = f.getCountry();
+            String ingr = f.getIngr();
 
-                ImageIcon icon = new ImageIcon("./image/Food/"+name+".png");
-                JButton foodImg = new JButton(icon);
-                panel1.add(foodImg);
-                panel12.add("West",panel1);
-                foodImg.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mouseEntered(MouseEvent e) {
-                        //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                        frame.setCursor(clickCursor);
-                    }
-                    @Override
-                    public void mouseExited(MouseEvent e) {
-                        ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                        frame.setCursor(normalCursor);
-                    }
-                });
-                Food food = user.getFood(name,store);
-                foodImg.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        new DetailPage(store,food);
-                        frame.dispose();
-                    }
-                });
+            ImageIcon icon = new ImageIcon("./image/Food/"+name+".png");
+            JButton foodImg = new JButton(icon);
+            panel1.add(foodImg);
+            panel12.add("West",panel1);
+            foodImg.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                    frame.setCursor(clickCursor);
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                    frame.setCursor(normalCursor);
+                }
+            });
+            Food food = user.getFood(name,store);
+            foodImg.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new DetailPage(store,food);
+                    frame.dispose();
+                }
+            });
 
-                JLabel foodName = new JLabel(name);
-                JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료 : "+ingr);
-                foodInfo.setEnabled(false);
-                foodInfo.setLineWrap(true);
-                foodName.setFont(font);
-                foodInfo.setFont(font);
-                GridLayout layout2 = new GridLayout(2,1);
-                panel2.setLayout(layout2);
-                panel2.add(foodName);
-                panel2.add(foodInfo);
-                panel12.add("East",panel2);
+            JLabel foodName = new JLabel(name);
+            JTextArea foodInfo = new JTextArea("#"+country+" #"+type+" #재료 : "+ingr);
+            foodInfo.setEnabled(false);
+            foodInfo.setLineWrap(true);
+            foodName.setFont(font);
+            foodInfo.setFont(font);
+            GridLayout layout2 = new GridLayout(2,1);
+            panel2.setLayout(layout2);
+            panel2.add(foodName);
+            panel2.add(foodInfo);
+            panel12.add("East",panel2);
 
 
-                ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
-                ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
-                JButton foodLikedImg;
-                if (user.getlikedSaveFile().contains(name))
-                    foodLikedImg = new JButton(fullHeartIcon);
-                else
-                    foodLikedImg = new JButton(emptyHeartIcon);
-                foodLikedImg.setBorderPainted(false);
-                foodImg.setBounds(10,10,160,150);
-                foodLikedImg.setBounds(350,10,40,40);
-                foodName.setBounds(180,10,160,40);
-                foodInfo.setBounds(180,60,210,100);
-                panel3.add(foodLikedImg);
-                foodLikedImg.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mouseEntered(MouseEvent e) {
-                        //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                        frame.setCursor(clickCursor);
-                    }
-                    @Override
-                    public void mouseExited(MouseEvent e) {
-                        ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                        frame.setCursor(normalCursor);
-                    }
-                });
-                foodLikedImg.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        // file writer를 통해 찜 목록에서 삭제 or 추가 기능 구현 필요
-                        if (!user.getlikedSaveFile().contains(name)){ // 찜 안한 음식 찜하기
-                            try {
-                                FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
-                                for (String str: user.getlikedSaveFile()){
-                                    fw.write(str + " ");
-                                }
-                                fw.write(name);
-                                fw.close();
-                                foodLikedImg.setIcon(fullHeartIcon);
-                                
-                            } catch (IOException ex) {
-                                ex.printStackTrace();
+            ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
+            ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
+            JButton foodLikedImg;
+            if (user.getlikedSaveFile().contains(name))
+                foodLikedImg = new JButton(fullHeartIcon);
+            else
+                foodLikedImg = new JButton(emptyHeartIcon);
+            foodLikedImg.setBorderPainted(false);
+            foodImg.setBounds(10,10,160,150);
+            foodLikedImg.setBounds(350,10,40,40);
+            foodName.setBounds(180,10,160,40);
+            foodInfo.setBounds(180,60,210,100);
+            panel3.add(foodLikedImg);
+            foodLikedImg.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
+                    frame.setCursor(clickCursor);
+                }
+                @Override
+                public void mouseExited(MouseEvent e) {
+                    ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
+                    frame.setCursor(normalCursor);
+                }
+            });
+            foodLikedImg.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // file writer를 통해 찜 목록에서 삭제 or 추가 기능 구현 필요
+                    if (!user.getlikedSaveFile().contains(name)){ // 찜 안한 음식 찜하기
+                        try {
+                            FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                            for (String str: user.getlikedSaveFile()){
+                                fw.write(str + " ");
                             }
-                        }else { // 찜했던 음식 목록에서 삭제
-                            try {
-                                FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
-                                for (String str: user.getlikedSaveFile()){
-                                    if (str.contentEquals(name))
-                                        continue;
-                                    fw.write(str + " ");
-                                }
-                                fw.close();
-                                foodLikedImg.setIcon(emptyHeartIcon);
-                            } catch (IOException ex) {
-                                ex.printStackTrace();
+                            fw.write(name);
+                            fw.close();
+                            foodLikedImg.setIcon(fullHeartIcon);
+
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }else { // 찜했던 음식 목록에서 삭제
+                        try {
+                            FileWriter fw = new FileWriter("./txt/LikedSaveFile.txt");
+                            for (String str: user.getlikedSaveFile()){
+                                if (str.contentEquals(name))
+                                    continue;
+                                fw.write(str + " ");
                             }
+                            fw.close();
+                            foodLikedImg.setIcon(emptyHeartIcon);
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
                         }
                     }
-                });
+                }
+            });
 
 
 
-                panel.add("West",panel12);
-                panel.add("East",panel3);
+            panel.add("West",panel12);
+            panel.add("East",panel3);
 
-                spanel.add(panel);
-            }
+            spanel.add(panel);
+
 
         }
         frame.add(spanel);

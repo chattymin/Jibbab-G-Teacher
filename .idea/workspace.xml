@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ingredients/버섯.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ingredients/페퍼론치노.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/Foods.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/Ingredients.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/Ingredients.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/LikedSaveFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedSaveFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/MyFridge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/MyFridge.txt" afterDir="false" />
-    </list>
+    <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
