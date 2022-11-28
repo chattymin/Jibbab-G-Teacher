@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Font;
 
 import food.Store;
 import food.User;
@@ -24,8 +23,8 @@ public class MyFridge {
 
     public MyFridge(Store store) {
         User user = store.userMgr.getList().get(0);
-        // Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
-        ArrayList<String> myFridge = user.getMyFridge();
+        ArrayList<String> myFridge = new ArrayList<>();
+        user.readtxt("./txt/MyFridge.txt", myFridge);
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
 
@@ -76,6 +75,7 @@ public class MyFridge {
         button.setFocusPainted(false);
         button.setPreferredSize(new Dimension(60, 60));
     }
+
 }
 
 class ImagePanel extends JPanel {public void paintComponent(Graphics g) {
