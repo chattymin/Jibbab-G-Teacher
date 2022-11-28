@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ingredients/감자.png" beforeDir="false" afterPath="$PROJECT_DIR$/image/ingredients/감자.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image/ingredients/닭고기.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ingredients/버섯.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/ingredients/페퍼론치노.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/Foods.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/Foods.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/txt/Ingredients.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/Ingredients.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/LikedSaveFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedSaveFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/MyFridge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/MyFridge.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +189,9 @@
       <workItem from="1669254229593" duration="1293000" />
       <workItem from="1669531503467" duration="1448000" />
       <workItem from="1669569189795" duration="48000" />
-      <workItem from="1669569296109" duration="650000" />
+      <workItem from="1669569296109" duration="1224000" />
+      <workItem from="1669612511757" duration="409000" />
+      <workItem from="1669618205858" duration="774000" />
     </task>
     <servers />
   </component>
