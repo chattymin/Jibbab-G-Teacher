@@ -53,8 +53,12 @@ public class SetMyFridge {
                 if(finish.equals(ae.getSource())) {
                     try {
                         FileWriter fw = new FileWriter("./txt/MyFridge.txt");
-                        checkedList = checkedList.replace("null ", "");
-                        fw.write(checkedList);
+                        if(checkedList == null) {
+                            fw.write("");
+                        } else {
+                            checkedList = checkedList.replace("null ", "");
+                            fw.write(checkedList);
+                        }
                         fw.close();
                     } catch (IOException ex) {
                         ex.printStackTrace();
@@ -104,12 +108,10 @@ public class SetMyFridge {
             if(e.getStateChange()==ItemEvent.SELECTED) {
                 tmp = " " + HIngres.get(e.getItem()).toString();
                 checkedList = checkedList + tmp;
-                System.out.println(checkedList);
             }
             else {
                 tmp = " " + HIngres.get(e.getItem()).toString();
                 checkedList = checkedList.replace(tmp, "");
-                System.out.println(checkedList);
             }
         }
     }
