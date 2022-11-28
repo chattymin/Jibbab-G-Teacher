@@ -331,6 +331,9 @@ public class SearchSelection {
 		});
 		searchIngr.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+        			store.userMgr.getList().get(0).getMyFridge().clear();
+        			store.userMgr.getList().get(0).readtxt("./txt/myFridge.txt",
+        					store.userMgr.getList().get(0).getMyFridge());
         			store.foodMgr.getsearchResult().clear();
         			store.userMgr.getList().get(0).fridgeSearch(store.foodMgr);
         			new SearchResult(store);
