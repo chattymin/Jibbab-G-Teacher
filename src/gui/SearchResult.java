@@ -21,6 +21,8 @@ public class SearchResult {
         Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
         Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);
+        user.getlikedSaveFile().clear();
+        user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
         frame.setTitle("검색 결과");
@@ -122,8 +124,6 @@ public class SearchResult {
                             }
                             fw.write(name);
                             fw.close();
-                            foodLikedImg.setIcon(fullHeartIcon);
-
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
@@ -135,12 +135,13 @@ public class SearchResult {
                                     continue;
                                 fw.write(str + " ");
                             }
-                            fw.close();
-                            foodLikedImg.setIcon(emptyHeartIcon);
+                            fw.close();  
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
                     }
+                    new SearchResult(store);
+                    frame.dispose();
                 }
             });
 
