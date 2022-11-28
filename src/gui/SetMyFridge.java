@@ -51,7 +51,6 @@ public class SetMyFridge {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 if(finish.equals(ae.getSource())) {
-                    System.out.println(ae.getSource());
                     try {
                         FileWriter fw = new FileWriter("./txt/MyFridge.txt");
                         checkedList = checkedList.replace("null ", "");
