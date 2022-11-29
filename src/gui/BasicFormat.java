@@ -2,7 +2,7 @@ package gui;
 
 import javax.swing.*;
 
-import food.Store;
+import main.Store;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

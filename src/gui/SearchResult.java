@@ -1,10 +1,11 @@
 package gui;
 
-import food.Food;
-import food.Store;
-import food.User;
-
 import javax.swing.*;
+
+import main.Food;
+import main.Store;
+import main.User;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,4 +1,4 @@
-package food;
+package main;
 
 import mgr.Manageable;
 import mgr.Manager;

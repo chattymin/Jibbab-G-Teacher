@@ -1,4 +1,4 @@
-package food;
+package main;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -60,7 +60,6 @@ public class Food implements Manageable, Comparable<Food> {
 	}
 
 	public String getName(){return name;}
-	//public String getRecipe(){return recipe;}
 	public String getIngr(){return ingr;}
 	public ArrayList<String> getRecipes(){return recipes;}
 	public String getType(){return type;}

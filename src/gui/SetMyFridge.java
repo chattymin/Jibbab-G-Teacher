@@ -4,14 +4,14 @@ import javax.swing.*;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
+import main.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import food.*;
 
 public class SetMyFridge {
     Font font = new Font("Binggrae-Bold",Font.BOLD, 14);

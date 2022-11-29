@@ -6,15 +6,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
+import main.Store;
+import main.User;
+
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.awt.Dimension;
 import java.awt.Graphics;
-
-import food.Store;
-import food.User;
 
 public class MyFridge {
 

@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import food.Store;
+import main.Store;
 
 // 검색 종류를 선택하는 검색선택 gui 구현 화면입니다
 public class SearchSelection {

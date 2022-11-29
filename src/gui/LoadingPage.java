@@ -1,11 +1,11 @@
 package gui;
 
-import food.Store;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
+import main.Store;
 
 public class LoadingPage {
 
