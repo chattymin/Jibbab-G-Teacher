@@ -1,7 +1,6 @@
 package food;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Scanner;
 import mgr.Manageable;
 
@@ -12,9 +11,7 @@ public class Food implements Manageable, Comparable<Food> {
 	String ingr; // ingredient 재료
 	ArrayList<String> recipes = new ArrayList<>();
 	String recipe; // 조리
-	int price = 10; // 정렬 수정하는 분이 맞춰서 수정해주세요..
 
-	// 중식 메인 면 짜장 0 면요리 짜장면 4
 	@Override
 	public void read(Scanner scan,Store store) {
 		String temp = null;
@@ -43,12 +40,6 @@ public class Food implements Manageable, Comparable<Food> {
 	}
 
 	@Override
-	public void print() {
-		System.out.format("[%s]%s(%s) - 재료:%s\n 조리법:%s\n",
-				country, name, type, ingr, recipe);
-	}
-
-	@Override
 	public boolean matches(String kwd) {
 		if (country.contentEquals(kwd))
 			return true;
@@ -62,10 +53,6 @@ public class Food implements Manageable, Comparable<Food> {
 			return true;
 		return false;
 	}
-	public String[] getTexts() {  //  행 추가를 위해 객체 데이터를 가져오는 getTexts 메소드
-		return new String[] {name, country, type, ingr, recipe};
-	}
-
 
 	@Override
 	public int compareTo(Food o) {
@@ -73,11 +60,8 @@ public class Food implements Manageable, Comparable<Food> {
 	}
 
 	public String getName(){return name;}
-
-	public String getRecipe(){return recipe;}
-
+	//public String getRecipe(){return recipe;}
 	public String getIngr(){return ingr;}
-
 	public ArrayList<String> getRecipes(){return recipes;}
 	public String getType(){return type;}
 	public String getCountry(){return country;}
