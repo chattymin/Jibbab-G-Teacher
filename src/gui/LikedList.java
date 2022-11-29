@@ -12,6 +12,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LikedList {
 
@@ -19,6 +20,10 @@ public class LikedList {
         Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
         Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);
+        ArrayList<Food> likedList = new ArrayList<>();
+        ArrayList<String> likedSaveFile = new ArrayList<>();
+        user.readtxt("./txt/LikedSaveFile.txt", likedSaveFile);
+        user.readLikedList(store,likedList);
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
         frame.setTitle("좋아요 목록");
@@ -35,7 +40,7 @@ public class LikedList {
         user.getlikedSaveFile().clear();
         user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
 
-        for (Food f : user.getlikedList()){
+        for (Food f : likedList){
 
             JPanel panel = new JPanel(new BorderLayout());
             panel.setPreferredSize(new Dimension(370,280));
@@ -158,8 +163,6 @@ public class LikedList {
         buttonPanel.setVisible(true);
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
-// 마우스 커서
-
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");
