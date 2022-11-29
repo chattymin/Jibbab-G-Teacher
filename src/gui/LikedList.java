@@ -13,7 +13,6 @@ import java.awt.event.MouseEvent;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class LikedList {
 
@@ -164,8 +163,6 @@ public class LikedList {
         buttonPanel.setVisible(true);
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
-// 마우스 커서
-
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");

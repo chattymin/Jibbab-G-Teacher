@@ -1,11 +1,8 @@
 package gui;
 
 import java.awt.event.*;
-import java.util.Random;
 import javax.swing.*;
-import food.Food;
 import food.Store;
-import food.User;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,7 +27,7 @@ public class MainPage extends JFrame {
         ImageIcon tipImgIcon = new ImageIcon("./image/tip/Tips"+randomNumber1+".jpg");
         JLabel FirstImg = new JLabel(tipImgIcon);
         FirstImg.setBounds(0, 0, 390, 200);
-        //중복 제거 완료
+        //중복 제거
         int randomNumber2;
         randomNumber2 = (int)(Math.random()*30)+1;
         while (true){

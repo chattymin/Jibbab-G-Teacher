@@ -28,7 +28,6 @@ public class MyFridge {
         // 재료, 이미지 해시 생성.
         setHash(HMyIngre, user);
 
-        // JFrame frame = new BasicFormat(store);  
         JFrame frame = new BasicFormat(store);
         frame.setTitle("내 냉장고");
 
@@ -45,14 +44,12 @@ public class MyFridge {
 			buttonPanel.add(btns[i]);
 		}
 
-
         JScrollPane scrollPane = new JScrollPane(buttonPanel);
         scrollPane.getVerticalScrollBar().setUnitIncrement(30);
         scrollPane.setBounds(0, 0, 390, 510);
         frame.add(scrollPane);
 
         frame.setVisible(true);
-
     }
 
     // 재료의 키워드와 이미지를 해시로 저장

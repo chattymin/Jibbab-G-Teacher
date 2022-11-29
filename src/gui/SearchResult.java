@@ -3,8 +3,6 @@ package gui;
 import food.Food;
 import food.Store;
 import food.User;
-import mgr.Factory;
-import mgr.Manager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -86,7 +84,6 @@ public class SearchResult {
             panel2.add(foodInfo);
             panel12.add("East",panel2);
 
-
             ImageIcon fullHeartIcon = new ImageIcon("./image/fullHeart.png");
             ImageIcon emptyHeartIcon = new ImageIcon("./image/emptyHeart.png");
             JButton foodLikedImg;
@@ -145,15 +142,12 @@ public class SearchResult {
                 }
             });
 
-
-
             panel.add("West",panel12);
             panel.add("East",panel3);
 
             spanel.add(panel);
-
-
         }
+
         frame.add(spanel);
         JScrollPane s = new JScrollPane(spanel);
         frame.add(s);
@@ -162,8 +156,6 @@ public class SearchResult {
         buttonPanel.setVisible(true);
         buttonPanel.setLayout(null);
         buttonPanel.setBounds(0, 510, 400,100);
-
-
 
         // homeButton
         ImageIcon homeImg = new ImageIcon("./image/home.png");
@@ -283,7 +275,5 @@ public class SearchResult {
         frame.add(buttonPanel);
 
         frame.setVisible(true);
-
     }
-
 }
