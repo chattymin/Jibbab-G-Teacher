@@ -34,31 +34,6 @@ public class Manager<T extends Manageable> {
 		}
 		filein.close();
 	}
-
-	public void printAll() {
-		for (T m : mList) {
-			m.print();
-		}
-	}
-
-	// 한식 양식 디저트 순으로 음식 종류별 검색 가능
-	// ex)한식->한식 전체 출력,찌개-> 한식 리스트 중 찌개 해당 음식 출력
-	// end입력시 한식 리스트 검색 종료->양식 검색 리스트 돌아감
-	public void search() {
-		String kwd = null;
-		while (true) {
-			System.out.printf("\n검색(end입력시 종료) : ");
-			kwd = scan.next();
-			if (kwd.equals("end"))
-				break;
-			System.out.println("====검색 결과====");
-			for (T m : getList()) {
-				if (m.matches(kwd)) {
-					m.print();
-				}
-			}
-		}
-	}
 	
 	public T find(String kwd) {
 		for (T m : getList())
@@ -77,7 +52,6 @@ public class Manager<T extends Manageable> {
 	}
 
 	public ArrayList<T> getList() {return mList;}
-	
 	public ArrayList<T> getsearchResult() {return searchResult;}
 
 }
