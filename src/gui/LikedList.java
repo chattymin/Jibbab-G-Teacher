@@ -25,6 +25,8 @@ public class LikedList {
         ArrayList<String> likedSaveFile = new ArrayList<>();
         user.readtxt("./txt/LikedSaveFile.txt", likedSaveFile);
         user.readLikedList(store,likedList);
+        user.getlikedSaveFile().clear();
+        user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
         JFrame frame = new JFrame();
         frame.setTitle("좋아요 목록");
@@ -37,9 +39,6 @@ public class LikedList {
         JPanel spanel = new JPanel();
         GridLayout layout = new GridLayout(0,1);
         spanel.setLayout(layout);
-
-        user.getlikedSaveFile().clear();
-        user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
 
         for (Food f : likedList){
 
@@ -104,7 +103,7 @@ public class LikedList {
             foodImg.setBounds(10,10,160,150);
             foodLikedImg.setBounds(350,10,40,40);
             foodName.setBounds(180,10,160,40);
-            foodInfo.setBounds(180,60,210,100);
+            foodInfo.setBounds(180,60,180,100);
             panel3.add(foodLikedImg);
             foodLikedImg.addMouseListener(new MouseAdapter() {
                 @Override
@@ -148,7 +147,6 @@ public class LikedList {
                     }
                     new LikedList(store);
                     frame.dispose();
-
                 }
             });
 

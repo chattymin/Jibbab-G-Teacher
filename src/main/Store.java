@@ -12,7 +12,7 @@ public class Store extends Manager<User> {
 	
 	Scanner scan = new Scanner(System.in);
 
-	void run() {
+	public void run() {
 		// 음식 매니저
 		foodMgr.readAll("./txt/Foods.txt", new Factory<Food>() {
 			@Override

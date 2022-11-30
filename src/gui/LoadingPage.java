@@ -32,7 +32,8 @@ public class LoadingPage {
                 alpha += increment;
                 if (alpha >= 255) {
                     alpha = -1;
-                    new Store();
+                    Store store = new Store();
+                    store.run();
                     frame.dispose();
                 }
                 if (alpha <= 0) {
