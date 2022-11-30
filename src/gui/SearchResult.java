@@ -96,7 +96,7 @@ public class SearchResult {
             foodImg.setBounds(10,10,160,150);
             foodLikedImg.setBounds(350,10,40,40);
             foodName.setBounds(180,10,160,40);
-            foodInfo.setBounds(180,60,210,100);
+            foodInfo.setBounds(180,60,180,100);
             panel3.add(foodLikedImg);
             foodLikedImg.addMouseListener(new MouseAdapter() {
                 @Override
