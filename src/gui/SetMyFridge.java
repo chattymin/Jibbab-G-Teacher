@@ -23,7 +23,7 @@ public class SetMyFridge extends BasicFormat{
 
     public SetMyFridge(Store store) {
         super(store);
-        JFrame frame = new BasicFormat(store);
+
         User user = store.userMgr.getList().get(0);
         ingredients = user.getIngredients();
 
@@ -66,18 +66,18 @@ public class SetMyFridge extends BasicFormat{
                     }
                 }
                 new MyFridge(store);
-                frame.dispose();
+                dispose();
             }
         });
 
         buttonPanel.add(finish);
         
 
-        frame.add(scrollPane);
-        frame.add(buttonPanel);
+        add(scrollPane);
+        add(buttonPanel);
 
-        frame.setTitle("보유 재료 수정");
-        frame.setVisible(true);
+        setTitle("보유 재료 수정");
+        setVisible(true);
     }
 
     JPanel setPanels(JPanel panel, String category, int num) {

@@ -12,8 +12,8 @@ import java.awt.event.ActionListener;
 public class MainPage extends BasicFormat {
     public MainPage(Store store) {
         super(store);
-        JFrame frame = new BasicFormat(store);
-        frame.setTitle("메인화면");
+
+        setTitle("메인화면");
         Font font = new Font("Binggrae",Font.PLAIN, 25);
 
         //마우스 커서
@@ -47,7 +47,7 @@ public class MainPage extends BasicFormat {
         TipsPanel.add(FirstImg);
         TipsPanel.add(SecTip);
 
-        frame.add(TipsPanel);
+        add(TipsPanel);
 
         // 리스트 설정 패널
         JPanel MainButtonPanel = new JPanel();
@@ -62,12 +62,12 @@ public class MainPage extends BasicFormat {
             @Override
             public void mouseEntered(MouseEvent e) {
                 //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
+                setCursor(clickCursor);
             }
             @Override
             public void mouseExited(MouseEvent e) {
                 ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
+                setCursor(normalCursor);
             }
         });
 
@@ -75,17 +75,17 @@ public class MainPage extends BasicFormat {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 new SetMyFridge(store);
-                frame.dispose();
+                dispose();
             }
         });
 
 
         MainButtonPanel.add(FridgeListModify);
 
-        frame.add(MainButtonPanel);
+        add(MainButtonPanel);
 
         // 최종 설정
-        frame.setVisible(true);
+        setVisible(true);
     }
 
 }

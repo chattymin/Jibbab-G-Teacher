@@ -18,10 +18,8 @@ public class DetailPage extends BasicFormat{
     JButton foodLikedImg;
     public DetailPage(Store store, Food food){
         super(store);
-        // JFrame에 기본 포멧을 New 해주시고, 해당 frame에 추가적으로 작성해서 덧붙이시면 됩니다.
-        JFrame frame = new BasicFormat(store);
         // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요
-        frame.setTitle("상세 정보 창");
+        setTitle("상세 정보 창");
         User user = store.userMgr.getList().get(0);
 
         // 마우스 커서
@@ -113,7 +111,7 @@ public class DetailPage extends BasicFormat{
                     }
                 }
                 new DetailPage(store, food);
-                frame.dispose();
+                dispose();
 
             }
         });
@@ -122,26 +120,26 @@ public class DetailPage extends BasicFormat{
             @Override
             public void mouseEntered(MouseEvent e) {
                 //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
+                setCursor(clickCursor);
             }
             @Override
             public void mouseExited(MouseEvent e) {
                 ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
+                setCursor(normalCursor);
             }
         });
 
         // frame에 넣기
-        frame.add(foodName);
-        frame.add(foodRecipe);
-        frame.add(foodIngr);
+        add(foodName);
+        add(foodRecipe);
+        add(foodIngr);
 
-        frame.add(foodImg);
-        frame.add(foodLikedImg);
+        add(foodImg);
+        add(foodLikedImg);
 
 
         // 이걸 여기서 작성해줘야 위에 작성한 frame에 넣은 요소들이 합쳐져서 보입니다.
         // BasicFormat에서 visible(true)하면 여기 클래스에서 넣은 frame 요소들은 안보여요
-        frame.setVisible(true);
+        setVisible(true);
     }
 }

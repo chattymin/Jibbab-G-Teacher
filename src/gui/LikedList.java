@@ -29,13 +29,8 @@ public class LikedList extends BasicFormat{
         user.getlikedSaveFile().clear();
         user.readtxt("./txt/LikedSaveFile.txt", user.getlikedSaveFile());
         Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
-        JFrame frame = new JFrame();
-        frame.setTitle("좋아요 목록");
-        frame.setLayout(null);
-        frame.setSize(400,640); // 가로, 세로 사이즈
-        frame.setResizable(true); // 창 크기 변경 가능 여부(false)
-        frame.setLocationRelativeTo(null); // 창이 가운데 생성되도록
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        setTitle("좋아요 목록");
 
         JPanel spanel = new JPanel();
         GridLayout layout = new GridLayout(0,1);
@@ -63,12 +58,12 @@ public class LikedList extends BasicFormat{
                 @Override
                 public void mouseEntered(MouseEvent e) {
                     //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                    frame.setCursor(clickCursor);
+                    setCursor(clickCursor);
                 }
                 @Override
                 public void mouseExited(MouseEvent e) {
                     ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                    frame.setCursor(normalCursor);
+                    setCursor(normalCursor);
                 }
             });
             Food food = user.getFood(name,store);
@@ -76,7 +71,7 @@ public class LikedList extends BasicFormat{
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     new DetailPage(store,food);
-                    frame.dispose();
+                    dispose();
                 }
             });
 
@@ -110,12 +105,12 @@ public class LikedList extends BasicFormat{
                 @Override
                 public void mouseEntered(MouseEvent e) {
                     //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                    frame.setCursor(clickCursor);
+                    setCursor(clickCursor);
                 }
                 @Override
                 public void mouseExited(MouseEvent e) {
                     ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                    frame.setCursor(normalCursor);
+                    setCursor(normalCursor);
                 }
             });
             foodLikedImg.addActionListener(new ActionListener() {
@@ -147,7 +142,7 @@ public class LikedList extends BasicFormat{
                         }
                     }
                     new LikedList(store);
-                    frame.dispose();
+                    dispose();
                 }
             });
 
@@ -158,130 +153,14 @@ public class LikedList extends BasicFormat{
 
             spanel.add(panel);
         }
-        //버튼을 만들 패널
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setVisible(true);
-        buttonPanel.setLayout(null);
-        buttonPanel.setBounds(0, 510, 400,100);
-
-        // homeButton
-        ImageIcon homeImg = new ImageIcon("./image/home.png");
-        JButton home =  new JButton("home",homeImg);
-        home.setBorderPainted(false); // 버튼 테두리 설정해제
-        home.setContentAreaFilled(false); // 뒤의 버튼 배경(?)이 계속 생겨서 써놓은 메소드입니다
-        home.setBounds(10,5,90,90);
-        home.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new MainPage(store);
-                frame.dispose();
-            }
-        });
-        home.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
-            }
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
-            }
-        });
-
-        // searchButton
-        ImageIcon searchImg = new ImageIcon("./image/search.png");
-        JButton search =  new JButton(searchImg);
-        search.setBorderPainted(false); // 버튼 테두리 설정해제
-        search.setContentAreaFilled(false);
-        search.setBounds(110,5,90,90);
-        search.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new SearchSelection(store);
-                frame.dispose();
-            }
-        });
-        search.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
-            }
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
-            }
-        });
-
-        // fridgeButton
-        ImageIcon fridgeImg = new ImageIcon("./image/fridge.png");
-        JButton fridge =  new JButton(fridgeImg);
-        fridge.setBorderPainted(false); // 버튼 테두리 설정해제
-        fridge.setContentAreaFilled(false);
-        fridge.setBounds(200,5,90,90);
-        fridge.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new MyFridge(store);
-                frame.dispose();
-            }
-        });
-        fridge.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
-            }
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
-            }
-        });
-
-        // likeButton
-        ImageIcon likeImg = new ImageIcon("./image/like.png");
-        Image likeImage = likeImg.getImage();
-        JButton like =  new JButton(likeImg);
-        like.setBorderPainted(false); // 버튼 테두리 설정해제
-        like.setContentAreaFilled(false);
-        like.setBounds(290,5,90,90);
-        like.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new LikedList(store);
-                frame.dispose();
-            }
-        });
-        like.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                //마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-                frame.setCursor(clickCursor);
-            }
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-                frame.setCursor(normalCursor);
-            }
-        });
-
-        // 패널에 버튼을 붙여준다
-        buttonPanel.add(home);
-        buttonPanel.add(search);
-        buttonPanel.add(fridge);
-        buttonPanel.add(like);
 
         JScrollPane scroll = new JScrollPane(spanel);
         scroll.setBounds(0,0,400,500);
         scroll.getVerticalScrollBar().setUnitIncrement(30);
-        frame.add(scroll);
-        frame.add(buttonPanel);
+        add(scroll);
 
-        frame.setVisible(true);
+
+        setVisible(true);
 
     }
 

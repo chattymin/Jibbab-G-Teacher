@@ -18,8 +18,7 @@ import main.Store;
 public class SearchSelection extends BasicFormat{
 	public SearchSelection(Store store) {
 		super(store);
-		JFrame frame = new BasicFormat(store);
-        frame.setTitle("검색 종류 선택");
+        setTitle("검색 종류 선택");
         Font font = new Font("Binggrae-Bold", Font.BOLD, 14);
 		// 마우스 커서
 		Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
@@ -40,12 +39,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		
@@ -60,12 +59,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel korLabel = new JLabel("한식");
@@ -83,12 +82,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel chiLabel = new JLabel("중식");
@@ -106,12 +105,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel japLabel = new JLabel("일식");
@@ -129,12 +128,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel westLabel = new JLabel("양식");
@@ -152,12 +151,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel beefLabel = new JLabel("소고기");
@@ -175,12 +174,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel porkLabel = new JLabel("돼지고기");
@@ -198,12 +197,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel chickenLabel = new JLabel("닭고기");
@@ -221,12 +220,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel mainDishLabel = new JLabel("메인요리");
@@ -244,12 +243,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel sideDishLabel = new JLabel("사이드요리");
@@ -267,12 +266,12 @@ public class SearchSelection extends BasicFormat{
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				//마우스가 해당 컴포넌트 영역 안으로 들어올때 발생
-				frame.setCursor(clickCursor);
+				setCursor(clickCursor);
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				////마우스가 해당 컴포넌트 영역 밖으로 나갈때 발생
-				frame.setCursor(normalCursor);
+				setCursor(normalCursor);
 			}
 		});
 		JLabel ingrLabel = new JLabel("냉장고 재료로 검색");
@@ -312,9 +311,9 @@ public class SearchSelection extends BasicFormat{
 		searchMenu.add(searchSideDish);
 		searchMenu.add(sideDishLabel);
 		
-		frame.add(searchMenu);
+		add(searchMenu);
 		
-		frame.setVisible(true);
+		setVisible(true);
 		
 		// 이벤트 부분, 냉장고 재료 검색 메소드는 user의 fridgeSearch, 나머지는 mgr의 kwdSearch 이용
 		// 검색 결과는 foodMgr의 searchResult에서 불러오기
@@ -325,7 +324,7 @@ public class SearchSelection extends BasicFormat{
         			String kwd = kwdTextField.getText();
         			store.foodMgr.kwdSearch(kwd);
         			new SearchResult(store);
-        			frame.dispose();
+        			dispose();
     			}
         	}
 		});
@@ -337,7 +336,7 @@ public class SearchSelection extends BasicFormat{
         			store.foodMgr.getsearchResult().clear();
         			store.userMgr.getList().get(0).fridgeSearch(store.foodMgr);
         			new SearchResult(store);
-        			frame.dispose();
+        			dispose();
         	}
 		});
 		searchKor.addActionListener(new ActionListener() {
@@ -345,7 +344,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("한식");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchChi.addActionListener(new ActionListener() {
@@ -353,7 +352,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("중식");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchJap.addActionListener(new ActionListener() {
@@ -361,7 +360,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("일식");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchWest.addActionListener(new ActionListener() {
@@ -369,7 +368,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("양식");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchBeef.addActionListener(new ActionListener() {
@@ -377,7 +376,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("소");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchPork.addActionListener(new ActionListener() {
@@ -385,7 +384,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("돼지");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchChicken.addActionListener(new ActionListener() {
@@ -393,7 +392,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("닭");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchMainDish.addActionListener(new ActionListener() {
@@ -401,7 +400,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("메인");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 		searchSideDish.addActionListener(new ActionListener() {
@@ -409,7 +408,7 @@ public class SearchSelection extends BasicFormat{
         		store.foodMgr.getsearchResult().clear();
         		store.foodMgr.kwdSearch("사이드");
         		new SearchResult(store);
-        		frame.dispose();
+        		dispose();
             	}
         	});
 	}
