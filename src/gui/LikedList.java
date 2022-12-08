@@ -15,9 +15,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class LikedList {
+public class LikedList extends BasicFormat{
 
     public LikedList(Store store) {
+        super(store);
         Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
         Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);

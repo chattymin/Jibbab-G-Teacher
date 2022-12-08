@@ -14,9 +14,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class DetailPage{
+public class DetailPage extends BasicFormat{
     JButton foodLikedImg;
     public DetailPage(Store store, Food food){
+        super(store);
         // JFrame에 기본 포멧을 New 해주시고, 해당 frame에 추가적으로 작성해서 덧붙이시면 됩니다.
         JFrame frame = new BasicFormat(store);
         // BasicFormat의 창 이름은 "기본 포멧"이기 때문에 현재 페이지에 맞게 이름 변경해주세요

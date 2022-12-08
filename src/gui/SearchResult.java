@@ -14,9 +14,10 @@ import java.awt.event.MouseEvent;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class SearchResult {
+public class SearchResult extends BasicFormat{
 
     public SearchResult(Store store){
+        super(store);
         Cursor normalCursor = new Cursor(Cursor.DEFAULT_CURSOR);
         Cursor clickCursor = new Cursor(Cursor.HAND_CURSOR);
         User user = store.userMgr.getList().get(0);

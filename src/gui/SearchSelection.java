@@ -15,9 +15,10 @@ import javax.swing.JTextField;
 import main.Store;
 
 // 검색 종류를 선택하는 검색선택 gui 구현 화면입니다
-public class SearchSelection {
+public class SearchSelection extends BasicFormat{
 	public SearchSelection(Store store) {
-        JFrame frame = new BasicFormat(store);
+		super(store);
+		JFrame frame = new BasicFormat(store);
         frame.setTitle("검색 종류 선택");
         Font font = new Font("Binggrae-Bold", Font.BOLD, 14);
 		// 마우스 커서

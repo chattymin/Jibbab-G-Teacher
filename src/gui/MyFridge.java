@@ -16,12 +16,13 @@ import java.util.HashMap;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
-public class MyFridge {
+public class MyFridge extends BasicFormat{
 
     Image background = new ImageIcon("./image/emptyFridge.png").getImage();
     HashMap<String, ImageIcon>HMyIngre = new HashMap<>();
 
     public MyFridge(Store store) {
+        super(store);
         User user = store.userMgr.getList().get(0);
         ArrayList<String> myFridge = new ArrayList<>();
         user.readtxt("./txt/MyFridge.txt", myFridge);

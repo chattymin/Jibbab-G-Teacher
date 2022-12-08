@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class SetMyFridge {
+public class SetMyFridge extends BasicFormat{
     Font font = new Font("Binggrae-Bold",Font.BOLD, 14);
     ArrayList<String> ingredients = null;
     String checkedList = null;
@@ -22,6 +22,7 @@ public class SetMyFridge {
     int index = 0;
 
     public SetMyFridge(Store store) {
+        super(store);
         JFrame frame = new BasicFormat(store);
         User user = store.userMgr.getList().get(0);
         ingredients = user.getIngredients();
