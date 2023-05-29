@@ -1,49 +1,42 @@
-Kotlin Jetpack Compose 활용해서 Android App 만드는 팀입니다.
-
-# 코딩 컨벤션
-
-- 네이밍 컨벤션
-   
-   변수, 함수 : camelCase 사용.    ex) var myAge = 24
-   
-   상수 : uppercased underscore-separated 사용.    ex) const val MY_AGE = 24
-   
-   이미지, font 등 파일 : snake_case 사용.    ex) suite_bold.ttf
-- 그 외 : 코틀린 공식 컨벤션
-
-참고 : https://kotlinlang.org/docs/coding-conventions.html#trailing-commas
+# 개발 배경
+매서운 추세로 증가하는 수많은 1인 가구들에게도 도움이 될 수 있을 프로그램을 만들기로 생각 했다.
+다양한 프로그램 종류 중에서 어플이 가장 접근성이 좋고, 많은 사람들이 활용하기 쉽다는 생각을 하여 어플을 만들기로 했다.
+여기서 생각한 자취생의 가장 큰 불편함은 하루도 빠짐없이 찾아오는 식사 메뉴에 대한 고민이라는 결론을 내렸다. 
+그래서 이번 팀 프로젝트의 주제를 “자취생을 위한 요리 레시피 추천 어플리케이션” 으로 결정 했다.
 
 
-# commit message 양식
+## 협업 방법
 
-기본적으로 Issues에 있는 Label의 양식을 따른다.
-| Label             | 내용                                                                         |
-| ----------------- | --------------------------------------------------------------------------- |
-| FEAT              |  새로운 기능 추가(개발)                                                          |
-| DOCS              |  문서 수정                                                                    |
-| FIX               |  버그 수정                                                                     |
-| REFACTOR          |  코드 리펙토링                                                                  |
-| STYLE             |  코딩스타일 변경(코드 자체에는 변경 없음)                                             |
-
-위와 같은 Label을 맨 앞에 적고 : 으로 구분 후 Issues에 있는 작업내용을 제목으로 작성  
-세부사항은 아래 description에 적기  
-기능을 여러개 구현했을 경우 상세 내용에서 문단 구분하여 작성  
-
-EX)
-| **FEAT : Login Page, Basic Page Format 구현**         |
-| ---------------------------------------------------- |
-| Splash Screen 후 Login Page로 넘어가도록 구현<br/>버튼을 누르면 메인페이지로 넘어가도록 설정<br/>OAuth와 같은 기능적인 부분은 추후 구현 예정<br/> <br/> Basic Page Format 완성 <br/>하단바에 4개의 아이콘 사용. 메인, 마이페이지, 커뮤니티, 설정 구현 <br/>임시 포인트 컬러 파란색으로 구현 <br/>각 페이지에 있을 경우 해당 아이콘 포인트 컬러로 나타냄<br/> OnceScreen을 통해 재사용성 증가  |
-
-# 협업 방법  
-main : 버그없는 완성본이 올라가는 branch  
-develop : 실질적인 개발branch  
-<br/>
-develop branch를 기반으로 새 branch를 만들어서 작업.  
-새 branch의 이름은 개발하고자 하는 기능의 이름  
-관련 작업이 끝난 후 오류여부 확인 후 develop branch에 병합.  
-develop branch에서 모든 기능의 연동성 확인 후 main으로 병합  
+일정관리 : ASANA를 활용하여 관리
+매번 회의가 종료된 후 각 팀원들은 해당 주차에 자신이 담당한 업무를 ASANA를 통해 확인했다.  
+프로젝트를 체계적으로 진행함에 있어 ASANA는 훌륭한 관리도구 가 되어주었다.  
+특히 보드와 캘린더 기능을 통해 본인이 현재 진행중인 작업의 기 한이 언제까지인지 확인했고, 타임라인 기능으로 선행 혹은 후속 작업이 어느정도 까지 진행되었는지 파악했다.  
+  
+![스크린샷 2023-05-29 오후 3 38 59](https://github.com/chattymin/ObjectOrientedTeamG/assets/52882799/dfe89942-7e41-4b5e-afdf-e350c7540ef7)
 
 
-<br/>
-<br/>
-Readme 꾸며줘요 캡틴 킴~
+깃 관리 전략 : GitHub-Flow  
+약 한 달간 진행되는 짧은 텀의 프 로젝트인 만큼 Git-Flow같은 복잡한 구조는 불필요하다고 생각했고, 간략화된 과정 을 통해 빠른 개발 및 관리가 가능한 GitHub-Flow를 따르기로 했다.  
+브랜치를 만들어 작업하고 Pull Request를 생성해 병합하며 안전한 코드 관리를 이루어냈다.  
+
+![스크린샷 2023-05-29 오후 3 40 38](https://github.com/chattymin/ObjectOrientedTeamG/assets/52882799/dabaa669-1c2c-4bec-abf5-ec5a40dbbf8e)
+
+
+
+## Members
+
+18 : 최덕형  
+19 : 박동민(팀장), 이찬영  
+21 : 안수연, 조혜은  
+
+
+## 결과물
+![스크린샷 2023-05-29 오후 3 37 02](https://github.com/chattymin/ObjectOrientedTeamG/assets/52882799/3aefbadc-f865-4899-88a6-c878fe151fb3)
+
+
+## 최종결과
+
+경기대학교 2022 객체지향 프로그래밍(DD015_1251)
+1등 팀
+
+![성적](https://github.com/chattymin/ObjectOrientedTeamG/assets/52882799/fe8e54cb-487f-4e96-a9d8-dc7131099215)
