@@ -6,57 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b628d06a-f4e9-4351-a6b6-45a2352d1d56" name="변경" comment="변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/DetailPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/MainPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SearchSelection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SetMyFridge$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SetMyFridge$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SetMyFridge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ObjectOrientedTeamG/gui/SetMyFridge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/DetailPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/DetailPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/LikedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/LikedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MyFridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MyFridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SearchSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SearchSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SetMyFridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SetMyFridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/LikedSaveFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/LikedSaveFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/MyFridge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/MyFridge.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,13 +79,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\yun10\Desktop\GIT\ObjectOrientedTeamG\image\Tips" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoadingPage">
+  <component name="RunManager" selected="애플리케이션.LoadingPage">
     <configuration name="LoadingPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.LoadingPage" />
       <module name="ObjectOrientedTeamG" />
@@ -202,8 +154,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoadingPage" />
-        <item itemvalue="Application.Store (1)" />
+        <item itemvalue="애플리케이션.LoadingPage" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +213,17 @@
       <workItem from="1669961150399" duration="3000" />
       <workItem from="1670425347683" duration="666000" />
       <workItem from="1670431038508" duration="42000" />
-      <workItem from="1670512979820" duration="442000" />
+      <workItem from="1670512979820" duration="467000" />
+      <workItem from="1670753482298" duration="54000" />
+      <workItem from="1670839260520" duration="27000" />
+      <workItem from="1670839293090" duration="48000" />
+      <workItem from="1670839343908" duration="154000" />
+      <workItem from="1670842406101" duration="1341000" />
+      <workItem from="1672624402475" duration="19000" />
+      <workItem from="1680504570773" duration="82000" />
+      <workItem from="1680765477141" duration="36000" />
+      <workItem from="1681039266188" duration="5000" />
+      <workItem from="1685340983349" duration="122000" />
     </task>
     <servers />
   </component>
