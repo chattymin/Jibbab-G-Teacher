@@ -15,5 +15,6 @@
 경기대학교 2022 객체지향 프로그래밍(DD015_1251)
 1등 팀
 
+![성적](https://github.com/chattymin/ObjectOrientedTeamG/assets/52882799/fe8e54cb-487f-4e96-a9d8-dc7131099215)
 
 
